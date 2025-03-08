@@ -1,0 +1,180 @@
+[
+  {
+    "id": "hands_on",
+    "text": "Are you willing to get your hands dirty with code and technical setup?",
+    "scope": "main",
+    "options": [
+      {
+        "id": "technical_ok",
+        "text": "Yes, I don't mind technical work",
+        "icon": "💻",
+        "tags": [],
+        "reason": "You may use static site generators, self-hosted solutions, or developer-focused tools but we won't exclude other options for the moment."
+      },
+      {
+        "id": "no_code",
+        "text": "No, I prefer ready-to-use solutions",
+        "icon": "🚀",
+        "excludeTags": ["self-hosted", "technical", "code", "developer", "advanced", "vps"],
+        "reason": "We'll focus on user-friendly and hosted solutions. You won't need to deal with code or technical setup. Static site generators and self hosting are excluded."
+      },
+      {
+        "id": "some_setup",
+        "text": "I can follow tutorials for basic setup",
+        "icon": "🔧",
+        "excludeTags": ["developer-focused", "technical-seo", "enterprise-grade"],
+        "reason": "We'll focus on user-friendly solutions. You may need to follow some tutorials for basic setup. Some static site generators may be included."
+      }
+    ]
+  },
+  {
+    "id": "technical_content",
+    "text": "Do you need to display technical content in your articles?",
+    "scope": "cms",
+    "options": [
+      {
+        "id": "yes_technical",
+        "text": "Yes but only code blocks",
+        "icon": "🔬",
+        "tags": ["markdown"],
+        "reason": "Mainstream CMS may support code blocks but with limitations. We'll focus on tools that support code blocks and syntax highlighting."
+      },
+      {
+        "id": "yes_very_technical",
+        "text": "Yes, I need to display complex technical content (code, math, diagrams)",
+        "icon": "🔬",
+        "tags": ["technical-content"],
+        "reason": "Mainstream CMS may not be the best fit for technical content even. We'll focus on tools that support code blocks, math formulas, diagrams, etc."
+      },
+      {
+        "id": "no_technical",
+        "text": "No, mainly text and images",
+        "icon": "📝",
+        "tags": []
+      }
+    ]
+  },
+  {
+    "id": "image_management",
+    "text": "How do you prefer to handle images in your content?",
+    "options": [
+      {
+        "id": "integrated",
+        "text": "Integrated solution (upload directly in the editor)",
+        "icon": "🖼️",
+        "tags": ["image-uploader"],
+        "reason": "You may use the built-in image uploader of your CMS or a third-party service. No need to deal with image hosting."
+      },
+      {
+        "id": "manual",
+        "text": "Manual management (upload to directories, reference files)",
+        "icon": "📁",
+        "tags": ["technical", "developer"]
+      },
+      {
+        "id": "whatever",
+        "text": "Manual or integrated, I don't mind",
+        "icon": "\uD83D\uDCDD",
+        "tags": []
+      }
+    ]
+  },
+  {
+    "id": "commenting_needs",
+    "text": "Do you need a comment system?",
+    "scope": "tools.comment-systems",
+    "options": [
+      { "id": "yes", "text": "Yes, it's essential", "icon": "💬", "tags": ["comments"] },
+      { "id": "maybe", "text": "Maybe later", "icon": "🤔", "tags": [] },
+      { "id": "no", "text": "No, not at all", "icon": "❌", "excludeTags": ["comments"] }
+    ]
+  },
+  {
+    "id": "budget",
+    "text": "What is your monthly budget for your blog?",
+    "scope": "main",
+    "options": [
+      { "id": "free", "text": "Free only", "icon": "0️⃣", "tags": ["free"] },
+      { "id": "low", "text": "Up to $10/month", "icon": "💸", "tags": ["affordable", "free"] },
+      { "id": "medium", "text": "Up to $30/month", "icon": "💵", "tags": ["affordable", "budget", "free"] },
+      { "id": "high", "text": "More than $30/month", "icon": "💰", "tags": ["premium", "professional", "affordable", "budget", "free"] }
+    ]
+  },
+  {
+    "id": "analytics_needs",
+    "text": "Do you need analytics for your blog?",
+    "scope": "tools.analytics",
+    "options": [
+      {
+        "id": "precise_tracking",
+        "text": "Yes, with precise visitor tracking",
+        "icon": "📊",
+        "tags": ["tracking"],
+        "reason": "Precise tracking requires cookies and may impact privacy. We'll focus on tools that provide detailed analytics."
+      },
+      {
+        "id": "privacy_focused",
+        "text": "Yes, but privacy-friendly only (no precise tracking)",
+        "icon": "🔒",
+        "tags": ["privacy", "analytics"],
+        "reason": "Privacy-friendly analytics tools don't use cookies and you may lose some insights. However, they are more respectful of your visitors privacy."
+      },
+      {
+        "id": "no_analytics",
+        "text": "No, I don't need analytics",
+        "icon": "🚫",
+        "excludeTags": ["analytics"]
+      }
+    ]
+  },
+  {
+    "id": "analytics",
+    "text": "What level of statistics and analytics do you want?",
+    "scope": "tools.analytics",
+    "dependsOn": {
+      "questionId": "analytics_needs",
+      "optionIds": ["precise_tracking", "privacy_focused"]
+    },
+    "options": [
+      {
+        "id": "basic",
+        "text": "Basic - Visit counts and traffic sources",
+        "icon": "📊",
+        "tags": ["analytics"]
+      },
+      {
+        "id": "advanced",
+        "text": "Advanced - Blog analytics (engagement, outliers detection etc...)",
+        "icon": "📈",
+        "tags": ["analytics-blog", "user-tracking"]
+      }
+    ]
+  },
+  {
+    "id": "content_portability",
+    "text": "How important is content portability for you?",
+    "scope": "cms",
+    "options": [
+      {
+        "id": "high_portability",
+        "text": "Essential - I need easy, complete export of all content",
+        "icon": "🧳",
+        "tags": ["full-export"],
+        "reason": "Some platforms may lock you in and make it hard to migrate your content. We'll focus on tools that provide easy export options with content, images, metadata etc..."
+      },
+      {
+        "id": "medium_portability",
+        "text": "Somewhat important - Basic export is sufficient",
+        "icon": "📦",
+        "tags": ["basic-export"],
+        "reason": "You may need to export your content in a basic format (like Markdown or XML). Some platforms may not provide all metadata or images."
+      },
+      {
+        "id": "low_portability",
+        "text": "Not important - I don't plan to migrate",
+        "icon": "🏠",
+        "tags": []
+      }
+    ]
+  }
+]

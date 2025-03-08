@@ -1,0 +1,290 @@
+
+body {
+    @apply bg-albescent-white-50 h-1 dark:bg-albescent-white-50  text-slate-700;
+}
+
+.input {
+    @apply dark:bg-white dark:text-slate-700 appearance-none;
+
+    input {
+        @apply dark:bg-white dark:text-slate-700;
+    }
+}
+
+/* Yes, this is weird. I don't know why but those definitions are not understood by tailwind. I had to override it. After 1h, $#!@ it */
+.pt-48 {
+    padding-top: 12rem;
+}
+
+.pt-28 {
+    padding-top: 5rem;
+}
+
+.mt-48 {
+    margin-top: 12rem;
+}
+
+.mt-64 {
+    margin-top: 16rem;
+}
+
+.card {
+    @apply rounded bg-white p-4 shadow;
+
+    &-bordered {
+        @apply border-albescent-white-100;
+    }
+
+    &-dense {
+        @apply p-0;
+    }
+}
+
+.card-dotted {
+    @apply border-2 border-dotted rounded p-4;
+}
+
+.card-contracted {
+    @apply rounded shadow bg-white ;
+}
+
+
+.alert-info {
+    @apply bg-blue-50 text-slate-600 border-blue-100;
+}
+
+
+.main-container {
+    @apply bg-albescent-white-10 min-h-screen h-full;
+}
+
+.select {
+    @apply dark:bg-white dark:text-slate-700;
+}
+
+.btn {
+    @apply text-slate-700 bg-white hover:bg-albescent-white-50/10 border-albescent-white-100 hover:border-albescent-white-100 capitalize;
+
+    &:disabled {
+        @apply bg-albescent-white-10 border-albescent-white-100 text-slate-400;
+    }
+}
+
+.btn-sm {
+    @apply rounded ;
+}
+
+.btn-primary {
+    @apply bg-albescent-white-100 hover:bg-albescent-white-200 text-slate-700 border-albescent-white-300 hover:border-albescent-white-400;
+}
+
+.btn-secondary {
+    @apply bg-slate-600 hover:bg-slate-500 text-white uppercase border-slate-900 hover:border-slate-800;
+}
+
+.btn-error {
+    @apply text-red-500 bg-red-100 hover:bg-red-200 border-red-300;
+}
+
+.alert {
+    @apply rounded-md;
+}
+
+.alert-info {
+    @apply bg-jordy-blue-50 border-jordy-blue-200;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 500ms ease-out;
+}
+
+
+.link {
+    @apply decoration-2 decoration-dashed underline underline-offset-4 font-bold text-cyan-400 hover:text-cyan-500 hover:decoration-solid;
+}
+
+.link-white {
+    @apply decoration-2 decoration-dashed underline underline-offset-4 font-bold text-white hover:text-white hover:decoration-solid;
+}
+
+.text-title {
+    @apply text-2xl text-slate-800 font-semibold;
+}
+
+.text-subtitle {
+    @apply text-2xl text-slate-600 font-light  ;
+}
+
+.text-legend {
+    @apply text-slate-500 text-xs;
+}
+
+
+
+.prose {
+    @apply text-white;
+
+    a {
+        @apply decoration-2 decoration-dashed underline underline-offset-4 font-bold text-cyan-400 hover:text-cyan-500 hover:decoration-solid;;
+    }
+
+    ul {
+        @apply list-disc list-inside;
+    }
+
+    h1 a,
+    h2 a,
+    h3 a,
+    h4 a,
+    h5 a,
+    h6 a {
+        @apply no-underline ;
+    }
+
+    h1 {
+        @apply text-5xl font-bold pb-6 ;
+    }
+    h2 {
+        @apply text-3xl font-bold pb-6 mt-3;
+    }
+
+    h3 {
+        @apply text-xl font-bold pb-4 mt-4;
+    }
+
+    pre {
+        @apply p-4 mt-10 bg-gray-700;
+    }
+}
+
+.title-section {
+    @apply text-xl font-medium pb-4 text-slate-900 border-b border-b-gray-100;
+
+    &_error {
+        @apply text-red-500;
+    }
+}
+
+.badge-square {
+    @apply inline-flex items-center gap-x-1.5 py-1 px-2 rounded text-xs font-medium;
+}
+
+.badge {
+    @apply inline-flex items-center gap-x-1.5 py-2.5 px-3 rounded-full text-xs font-medium;
+}
+
+.badge-success {
+    @apply bg-albescent-white-100 border-albescent-white-200 text-albescent-white-700;
+}
+
+.badge-secondary {
+    @apply bg-green-100 border-green-200 text-green-700;
+}
+
+.badge-warning {
+    @apply bg-orange-100 border-orange-200 text-orange-700;
+}
+
+.badge-error {
+    @apply bg-red-100 border-red-200 text-red-700;
+}
+
+.dropdown-content {
+    @apply bg-white text-slate-700;
+}
+
+/*Color scheme*/
+.pulse-info {
+    @apply bg-jordy-blue-300 ;
+}
+.pulse-danger {
+    @apply bg-red-500 ;
+}
+.pulse-success {
+    @apply bg-green-300 ;
+}
+.pulse-warning {
+    @apply bg-yellow-300 ;
+}
+
+
+.c-main {
+    @apply bg-albescent-white-50;
+}
+
+
+.c-pale-main {
+    @apply bg-albescent-white-10;
+}
+
+.border-c-main {
+    @apply border-albescent-white-100;
+}
+
+.table-clean {
+    @apply w-full text-sm text-left rtl:text-right border-separate border-spacing-y-1;
+
+    thead {
+        @apply text-xs uppercase text-gray-700;
+
+        tr {
+            @apply bg-transparent;
+        }
+
+        th {
+            @apply px-4 lg:px-6 py-4 font-semibold tracking-wider;
+        }
+    }
+
+    tbody {
+        tr {
+            @apply bg-white shadow-sm rounded-lg transition-colors;
+
+            &:hover {
+                @apply bg-albescent-white-50;
+            }
+
+            td {
+                @apply px-4 lg:px-6 py-2 first:rounded-l-lg last:rounded-r-lg;
+            }
+        }
+    }
+}
+
+.table {
+
+    @apply w-full text-sm text-left rtl:text-right;
+    thead {
+        @apply text-xs uppercase bg-albescent-white-50 border-x border-t rounded-t border-albescent-white-100 text-gray-700;
+
+        tr {
+            @apply border-x border-t rounded-t border-albescent-white-100;
+        }
+
+        th {
+            @apply px-2 lg:px-6 py-3 text-slate-700 ;
+        }
+    }
+    tbody {
+        tr {
+            @apply bg-white
+            border border-albescent-white-100
+            hover:bg-albescent-white-50/30 ;
+
+            th {
+                @apply px-6 py-3;
+            }
+        }
+    }
+}
+
+.input-txt {
+    @apply border text-sm rounded-lg block w-full
+    p-2.5 bg-albescent-white-50 border-albescent-white-200 placeholder-gray-400 text-slate-900 ;
+}
