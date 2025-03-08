@@ -1,75 +1,30 @@
-# Nuxt Minimal Starter
+## Blogtally blog starter kit
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This repository contains various resources for bloggers and content creators to help them get started with their blog.
 
-## Setup
+You may want to contribute to this repository by suggesting new resources or improvements to existing ones.
 
-Make sure to install dependencies:
+To do so, either create a new issue or submit a pull request with your changes.
 
-```bash
-# npm
-npm install
+This repository is however not intended to list all software tools or resources available for bloggers. 
+Instead, it focuses on a curated list of resources that are most relevant to bloggers and content creators. 
 
-# pnpm
-pnpm install
+Some suggestions may be refused if:
+- They are not relevant to bloggers
+- They do not meet quality standards (e.g., outdated, poorly maintained)
+- They have limited functionality compared to other similar resources
+- They lack proper documentation
+- They are too niche or specialized for general blogging needs (an e-commerce platform, for example, event if it has a blog feature)
+- They have known security or privacy concerns
 
-# yarn
-yarn install
+## License
 
-# bun
-bun install
-```
+**All Rights Reserved**
 
-## Development Server
+This repository is public for viewing purposes only.
 
-Start the development server on `http://localhost:3000`:
+Copyright © Blogtally
 
-```bash
-# npm
-npm run dev
+**No permission is granted** to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of this software without explicit written permission from the owner.
 
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+For any usage requests, please contact me at: contact@blogtally.com
