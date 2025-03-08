@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
     @apply bg-albescent-white-50 h-1 dark:bg-albescent-white-50  text-slate-700;

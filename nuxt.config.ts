@@ -44,13 +44,19 @@ export default defineNuxtConfig({
     },
   },
 
+  tailwindcss: {
+    config: {
+      content: ['./pages/**/*.{vue,js,ts}', './components/**/*.{vue,js,ts}'],
+    },
+  },
+
   nitro: {
     routeRules: {
       '/quizz': { redirect: '/quiz/cms' }
     }
   },
 
-  css: ['~/assets/css/style.css'],
+  css: ['~/assets/css/style.scss'],
 
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true }
