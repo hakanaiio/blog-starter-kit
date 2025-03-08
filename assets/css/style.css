@@ -11,23 +11,6 @@ body {
     }
 }
 
-/* Yes, this is weird. I don't know why but those definitions are not understood by tailwind. I had to override it. After 1h, $#!@ it */
-.pt-48 {
-    padding-top: 12rem;
-}
-
-.pt-28 {
-    padding-top: 5rem;
-}
-
-.mt-48 {
-    margin-top: 12rem;
-}
-
-.mt-64 {
-    margin-top: 16rem;
-}
-
 .card {
     @apply rounded bg-white p-4 shadow;
 

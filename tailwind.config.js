@@ -3,6 +3,9 @@
 module.exports = {
     theme: {
         extend: {
+            boxShadow: {
+                '3xl': '0px -10px 40px 10px rgba(0, 0, 0, 0.9)',
+            },
             colors: {
                 'jordy-blue': {
                     50: '#f1f6fd',
