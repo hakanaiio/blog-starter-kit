@@ -1,9 +1,8 @@
-const url = process.env.BASE_URL || 'https://blogtally.com/resources'
+const url = process.env.BASE_URL || 'https://resources.blogtally.com'
 
 export default defineNuxtConfig({
 
   app: {
-    baseURL: '/resources/',
     head: {
       htmlAttrs: {
         lang: 'en',
