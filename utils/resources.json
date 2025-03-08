@@ -46,7 +46,7 @@
     {
       "id": "plausible",
       "name": "Plausible Analytics",
-      "logo": "/resources/logos/plausible.png",
+      "logo": "/logos/plausible.png",
       "description": "Lightweight and privacy-focused web analytics tool with a simple, clean interface.",
       "url": "https://plausible.io",
       "pros": [
@@ -90,7 +90,7 @@
     {
       "id": "umami",
       "name": "Umami",
-      "logo": "/resources/logos/umami.png",
+      "logo": "/logos/umami.png",
       "description": "Simple, fast, privacy-focused alternative to Google Analytics with open-source roots.",
       "url": "https://umami.is",
       "pros": [
