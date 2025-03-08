@@ -6,3 +6,8 @@ export const quizMapping = {
     analytics: analyticsQuiz,
 }
 
+
+export function getQuizQuestions(category: string) {
+    const categoryKey = category.split('.')[0]
+    return quizMapping[categoryKey] || defaultQuiz
+}

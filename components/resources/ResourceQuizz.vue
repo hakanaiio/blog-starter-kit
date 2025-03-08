@@ -187,21 +187,16 @@
 </template>
 
 <script setup lang="ts">
-import {computed, onMounted, ref} from 'vue'
+import {computed, ref} from 'vue'
 import ResourceCard from '~/components/resources/ResourceCard.vue'
-import {quizMapping} from '~/utils/static-import-quizz'
+import {getQuizQuestions} from '~/utils/static-import-quizz'
 
 const props = defineProps<{
     category: string,
 }>()
 
 
-function getQuizQuestions() {
-    const categoryKey = props.category.split('.')[0]
-    return quizMapping[categoryKey] || defaultQuiz
-}
-
-const questions = ref(getQuizQuestions())
+const questions = ref(getQuizQuestions(props.category))
 const resources = useResources()
 
 const allItems = ref([])
@@ -218,10 +213,7 @@ const answers = ref<Record<string, string>>({})
 const completed = ref(false)
 const filteredItems = ref<any[]>([])
 
-
-onMounted(async () => {
-    filteredItems.value = allItems.value
-})
+filteredItems.value = allItems.value
 
 // Progression du quiz
 const progress = computed(() => {
