@@ -72,8 +72,13 @@
         <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
             <!-- Description détaillée -->
             <div class="content-section">
-                <div v-if="longDescription" class="prose max-w-none prose-p:text-slate-700 prose-li:text-slate-700 prose-headings:text-slate-900">
-                    <ContentDoc :path="`/${item.contentSlug}`" />
+                <div
+                    v-if="longDescription"
+                    class="prose prose-h2:text-slate-700
+                max-w-none prose-a:!text-slate-700 prose-a:!no-underline prose-p:text-slate-700
+                prose-li:text-slate-700 prose-headings:text-slate-900"
+                >
+                    <ContentDoc :path="`/resources/${item.contentSlug}`" />
                 </div>
             </div>
 

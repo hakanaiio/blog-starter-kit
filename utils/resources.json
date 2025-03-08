@@ -92,6 +92,7 @@
         "name": "BlogTally Pulse",
         "logo": "https://blogtally.com/_ipx/f_webp/android-chrome-192x192.png",
         "use" : true ,
+        "contentSlug": "blogtally-pulse",
         "description": "Blog-specific analytics platform designed to give content creators the metrics that matter most for blogging.",
         "url": "https://blogtally.com/products/pulse",
         "pros": [
