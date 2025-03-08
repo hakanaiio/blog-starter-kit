@@ -12,9 +12,16 @@ export default defineNuxtConfig({
 
   site: {
     url,
-    name: 'BlogTally',
+    name: 'BlogTally - blog starter kit',
     indexable: true
   },
+
+  sitemap: {
+    sources: [
+      '/api/__sitemap__/urls',
+    ]
+  },
+
 
   modules: ['@nuxtjs/tailwindcss', '@nuxt/image', '@nuxtjs/robots', '@nuxtjs/sitemap', '@nuxt/content', 'nuxt-security'],
 
