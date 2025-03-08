@@ -77,7 +77,7 @@
                                     <div class="text-2xl font-bold text-slate-800 flex justify-center items-center gap-2 ">
                                         <NuxtImg class="h-8 w-8 inline " src="/android-chrome-192x192.png" format="webp" alt="Logo Blogtally" />
                                         <NuxtLink to="/" class="text-slate-800">
-                                            BlogTally
+                                            Blog starter kit
                                         </NuxtLink>
                                     </div>
                                 </div>
@@ -109,6 +109,9 @@
                                             </li>
                                         </ul>
                                     </details>
+                                    <NuxtLink v-else :to="item.path">
+                                        {{ item.name }}
+                                    </NuxtLink>
                                 </li>
                             </ul>
                         </div>
@@ -142,6 +145,9 @@
                                     </li>
                                 </ul>
                             </details>
+                            <NuxtLink v-else :to="item.path">
+                                {{ item.name }}
+                            </NuxtLink>
                         </li>
                     </ul>
 
@@ -164,26 +170,28 @@ interface SubMenuItem {
 
 interface MenuItem {
     name: string;
+    path?: string;
     subMenu?: SubMenuItem[];
 }
 
 const menu: MenuItem[] = [
     {
-        name: 'Products',
+        name: 'Which CMS should I choose?',
+        path: '/quiz/cms'
+    },
+    {
+        name: 'Categories',
         subMenu: [
-            { name: 'Pulse', path: '/products/pulse', eventName: 'PulseClick' },
-            { name: 'Broadcast', path: '/products/broadcast', eventName: 'BroadcastClick' },
-            { name: 'Scout (soon)', disabled: true, eventName: 'ScoutClick' },
+            { name: 'Cms', path: '/cms' },
+            { name: 'Hosting', path: '/hosting' },
+            { name: 'Tools', path: '/tools' },
+            { name: 'Communities', path: '/community' },
         ]
     },
     {
-        name: 'Resources',
-        subMenu: [
-            { name: 'Blog', path: '/blog', external: true, eventName: 'Blog' },
-            { name: 'Docs', path: '/docs/', external: true, eventName: 'Docs' },
-            { name: 'Blogger starter kit', path: '/', external: true, eventName: 'Resources' },
-        ]
-    },
+        name: 'About',
+        path: '/about'
+    }
 ]
 const navLinks = ref(menu)
 const mobileMenuOpen = ref(false)
