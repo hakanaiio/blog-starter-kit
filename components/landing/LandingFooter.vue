@@ -57,8 +57,8 @@
                         <NuxtLink to="/" :external="true" data-blogtally-event="Resources">
                             Blogger starter kit
                         </NuxtLink>
-                        <NuxtLink to="https://github.com/blogtally/blog-starter-kit" :external="true" class="flex">
-                            <Icon name="fa6-brands:github" size="4" />
+                        <NuxtLink to="https://github.com/blogtally/blog-starter-kit" :external="true" class="flex gap-1 items-center">
+                            <Icon icon="logos:github-icon" size="4" />
                             Contribute on github
                         </NuxtLink>
                     </div>
