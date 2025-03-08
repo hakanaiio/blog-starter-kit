@@ -66,6 +66,28 @@
       "quizzTags": ["free", "analytics", "privacy", "simple", "lightweight", "performance", "beginner-friendly"]
     },
     {
+      "id": "fathom",
+      "name": "Fathom Analytics",
+      "description": "Simple, privacy-focused website analytics that doesn't track or store personal data of your users.",
+      "url": "https://usefathom.com",
+      "pros": [
+        "GDPR, CCPA and ePrivacy compliant",
+        "No cookie banners required",
+        "Simple, intuitive dashboard",
+        "Fast loading script (< 1KB)",
+        "Unlimited websites on all plans"
+      ],
+      "cons": [
+        "More expensive than some alternatives",
+        "Fewer advanced features than Google Analytics",
+        "Limited historical data on lower plans",
+        "No free tier (except for trial)"
+      ],
+      "pricing": "From $14/month for 100,000 page views (annual billing)",
+      "tags": ["analytics", "privacy", "gdpr-compliant", "cookie-free", "simple"],
+      "quizzTags": ["budget", "analytics", "privacy", "gdpr-compliant", "cookie-free", "simple", "fast"]
+    },
+    {
       "id": "umami",
       "name": "Umami",
       "logo": "/resources/logos/umami.png",
@@ -2037,7 +2059,7 @@
           "hasQuizz": true,
           "name": "Analytics Tools",
           "description": "Privacy-friendly solutions to track visitors and understand your audience",
-          "itemRefs": ["blogtallypulse", "matomo", "pirsch",  "plausible", "umami" ]
+          "itemRefs": ["blogtallypulse", "fathom", "matomo", "pirsch",  "plausible", "umami" ]
         },
         {
           "id": "comment-systems",

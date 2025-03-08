@@ -38,7 +38,7 @@
     "options": [
       { "id": "free", "text": "Free only", "icon": "0️⃣", "tags": ["free"],
         "reason": "Some tools can provide a free tier but most of the time, free means that you have to host it yourself" },
-      { "id": "low", "text": "From $5/month", "icon": "💸", "tags": ["affordable", "free"] },
+      { "id": "low", "text": "Up to $5/month", "icon": "💸", "tags": ["affordable", "free"] },
       { "id": "medium", "text": "Up to $30/month", "icon": "💵", "tags": ["affordable", "budget", "free"] },
       { "id": "high", "text": "More than $30/month", "icon": "💰", "tags": ["professional", "affordable", "budget", "free"] }
     ]
