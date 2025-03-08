@@ -15,10 +15,6 @@
             </div>
 
             <div class="mt-48">
-                <ResourceQuizzCTA />
-            </div>
-
-            <div class="mt-48">
                 <ResourceAllCategoriesAndSubCategories />
             </div>
         </main>

@@ -52,6 +52,54 @@ export const useResources = () => {
         return resourcesData.items.find(item => item.id === itemId)
     }
 
+    const isCategory = (anIdThatWeDontKnowYetItsNature: string): boolean => {
+        return getCategoryById(anIdThatWeDontKnowYetItsNature) !== undefined
+    }
+
+    const isSubcategory = (anIdThatWeDontKnowYetItsNature: string): boolean => {
+        return getSubcategoryById(anIdThatWeDontKnowYetItsNature, anIdThatWeDontKnowYetItsNature) !== undefined
+    }
+
+    const getAllItemsByCategoryOrSubcategory = (anIdThatWeDontKnowYetItsNature: string): ResourceItem[] => {
+
+        const category = getCategoryById(anIdThatWeDontKnowYetItsNature)
+        if (!category) {
+            return getItemsBySubcategoryId(anIdThatWeDontKnowYetItsNature)
+        } else {
+            return getAllItemsByCategory(anIdThatWeDontKnowYetItsNature)
+        }
+    }
+
+
+    const getAllItemsByCategory = (categoryId: string): ResourceItem[] => {
+        const category = getCategoryById(categoryId)
+
+        return category?.subcategories.flatMap(subcategory => {
+            return subcategory.itemRefs
+                .map(itemId => getItemById(itemId))
+                .filter((item): item is ResourceItem => item !== undefined)
+        })
+    }
+
+    /**
+     * Get items for a subcategory using only the subcategory ID, without needing to know the parent category
+     */
+    const getItemsBySubcategoryIdOnly = (subcategoryId: string): ResourceItem[] => {
+        // Search through all categories to find the subcategory with this ID
+        for (const category of resourcesData.categories) {
+            const subcategory = category.subcategories.find(sub => sub.id === subcategoryId)
+            if (subcategory) {
+                // Found the subcategory, return its items
+                return subcategory.itemRefs
+                    .map(itemId => getItemById(itemId))
+                    .filter((item): item is ResourceItem => item !== undefined)
+            }
+        }
+
+        // If no matching subcategory was found, return an empty array
+        return []
+    }
+
     /**
      * Get items for a subcategory by resolving the references
      */
@@ -127,6 +175,11 @@ export const useResources = () => {
     }
 
     return {
+        getItemsBySubcategoryIdOnly,
+        isCategory,
+        isSubcategory,
+        getAllItemsByCategoryOrSubcategory,
+        getAllItemsByCategory,
         getAllCategories,
         getCategoryById,
         getSubcategoriesByCategoryId,

@@ -1,0 +1,61 @@
+[
+  {
+    "id": "budget",
+    "text": "What is your monthly budget for your blog?",
+    "scope": "main",
+    "options": [
+      { "id": "free", "text": "Free only", "icon": "0️⃣", "tags": ["free"] },
+      { "id": "low", "text": "From $5/month and more", "icon": "💸", "tags": ["affordable", "free"] }
+    ]
+  },
+  {
+    "id": "analytics_needs",
+    "text": "Do you need analytics for your blog?",
+    "scope": "tools.analytics",
+    "options": [
+      {
+        "id": "precise_tracking",
+        "text": "Yes, with precise visitor tracking",
+        "icon": "📊",
+        "tags": ["tracking"],
+        "reason": "Precise tracking requires cookies and may impact privacy. We'll focus on tools that provide detailed analytics."
+      },
+      {
+        "id": "privacy_focused",
+        "text": "Yes, but privacy-friendly only (no precise tracking)",
+        "icon": "🔒",
+        "tags": ["privacy", "analytics"],
+        "reason": "Privacy-friendly analytics tools don't use cookies and you may lose some insights. However, they are more respectful of your visitors privacy."
+      },
+      {
+        "id": "no_analytics",
+        "text": "No, I don't need analytics",
+        "icon": "🚫",
+        "excludeTags": ["analytics"]
+      }
+    ]
+  },
+  {
+    "id": "analytics",
+    "text": "What level of statistics and analytics do you want?",
+    "scope": "tools.analytics",
+    "dependsOn": {
+      "questionId": "analytics_needs",
+      "optionIds": ["precise_tracking", "privacy_focused"]
+    },
+    "options": [
+      {
+        "id": "basic",
+        "text": "Basic - Visit counts and traffic sources",
+        "icon": "📊",
+        "tags": ["analytics"]
+      },
+      {
+        "id": "advanced",
+        "text": "Advanced - Blog analytics (engagement, outliers detection etc...)",
+        "icon": "📈",
+        "tags": ["analytics-blog", "user-tracking"]
+      }
+    ]
+  }
+]

@@ -17,6 +17,7 @@ declare global {
     interface Subcategory {
         id: string;
         name: string;
+        hasQuizz: boolean;
         description: string;
         itemRefs: string[]; // References to items instead of containing them directly
     }
@@ -24,6 +25,7 @@ declare global {
     interface Category {
         id: string;
         name: string;
+        hasQuizz: boolean;
         description: string;
         icon: string;
         cta?: string;

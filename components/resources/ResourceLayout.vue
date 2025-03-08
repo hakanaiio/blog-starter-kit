@@ -48,8 +48,6 @@
             </ol>
         </nav>
 
-
-        <!-- En-tête de catégorie -->
         <div v-if="category" class="category-header">
             <component :is="getCategoryIcon(category.id)" class="category-icon" />
             <div class="category-header-content">
@@ -59,8 +57,40 @@
                 <p class="category-description">
                     {{ category.description }}
                 </p>
+
+                <div v-if="category.hasQuizz" class="cms-quiz-cta">
+                    <div class="cms-quiz-card">
+                        <div class="cms-quiz-content">
+                            <h3 class="cms-quiz-title">
+                                Not sure where to start?
+                            </h3>
+                            <p class="cms-quiz-description">
+                                Take our quiz to find the perfect <span class="capitalize">{{ category.name }}</span> for your blog.
+                            </p>
+                        </div>
+                        <NuxtLink :to="`/quiz/${category.id}`" class="cms-quiz-button">
+                            Take the quiz
+                        </NuxtLink>
+                    </div>
+                </div>
+                <div v-if="subcategory?.hasQuizz" class="cms-quiz-cta">
+                    <div class="cms-quiz-card">
+                        <div class="cms-quiz-content">
+                            <h3 class="cms-quiz-title">
+                                Not sure where to start?
+                            </h3>
+                            <p class="cms-quiz-description">
+                                Take our quiz to find the perfect <span class="capitalize">{{ subcategory.name }}</span> for your blog.
+                            </p>
+                        </div>
+                        <NuxtLink :to="`/quiz/${subcategory.id}`" class="cms-quiz-button">
+                            Take the quiz
+                        </NuxtLink>
+                    </div>
+                </div>
             </div>
         </div>
+
         <div v-else-if="pageTitle" class="page-header">
             <h1 class="page-title">
                 {{ pageTitle }}
@@ -321,5 +351,36 @@ const getCategoryIcon = (categoryId: string) => {
 
 .related-subcategory-count {
   @apply text-xs text-slate-600 font-medium;
+}
+
+.cms-quiz-cta {
+  @apply mt-6;
+}
+
+.cms-quiz-card {
+  @apply flex flex-col md:flex-row items-center justify-between p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border border-blue-100 shadow-sm;
+}
+
+.cms-quiz-content {
+  @apply mb-4 md:mb-0;
+}
+
+.cms-quiz-title {
+  @apply text-xl font-bold text-gray-800 mb-1;
+}
+
+.cms-quiz-description {
+  @apply text-gray-600;
+}
+
+.cms-quiz-button {
+  @apply px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg shadow-sm transition-colors duration-200 whitespace-nowrap;
+}
+
+/* Pour les écrans mobiles, vous pourriez vouloir ajuster le style */
+@media (max-width: 768px) {
+  .cms-quiz-card {
+    @apply text-center;
+  }
 }
 </style>

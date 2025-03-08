@@ -17,16 +17,6 @@
                         <div class="text-sm text-slate-600">
                             Copyright © {{ new Date().getFullYear() }}
                         </div>
-                        <div class="mt-3">
-                            <div class="link-subheader">
-                                Other product:
-                            </div>
-                            <div class="flex flex-col gap-2 links">
-                                <NuxtLink to="https://bloggrify.com" target="_blank">
-                                    Bloggrify
-                                </NuxtLink>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div>
@@ -34,19 +24,22 @@
                         Product
                     </div>
                     <div class="flex flex-col gap-1.5 text-sm links">
-                        <NuxtLink to="/products/pulse" data-blogtally-event="PulseClick">
-                            Pulse
+                        <NuxtLink to="https://blogtally.com/products/pulse" data-blogtally-event="PulseClick">
+                            Pulse (analytics)
                         </NuxtLink>
-                        <NuxtLink to="/products/broadcast" data-blogtally-event="BroadcastClick">
-                            Broadcast
+                        <NuxtLink to="https://blogtally.com/products/broadcast" data-blogtally-event="BroadcastClick">
+                            Broadcast (newsletters)
                         </NuxtLink>
-
-                        <NuxtLink to="/privacy-policy">
-                            Privacy Policy
-                        </NuxtLink>
-                        <NuxtLink to="/terms-of-service">
-                            Terms of Service
-                        </NuxtLink>
+                    </div>
+                    <div class="mt-3">
+                        <div class="link-subheader">
+                            Other product:
+                        </div>
+                        <div class="flex flex-col gap-2 links">
+                            <NuxtLink to="https://bloggrify.com" target="_blank">
+                                Bloggrify (static site generator)
+                            </NuxtLink>
+                        </div>
                     </div>
                 </div>
 
@@ -55,17 +48,14 @@
                         Resources
                     </div>
                     <div class="flex flex-col gap-2 links">
-                        <NuxtLink to="/docs/" :external="true" data-blogtally-event="Docs">
+                        <NuxtLink to="https://blogtally.com/docs/" :external="true" data-blogtally-event="Docs">
                             Docs
                         </NuxtLink>
-                        <NuxtLink to="/blog/" :external="true" data-blogtally-event="Docs">
+                        <NuxtLink to="https://blogtally.com/blog/" :external="true" data-blogtally-event="Docs">
                             Blog
                         </NuxtLink>
                         <NuxtLink to="/" :external="true" data-blogtally-event="Resources">
                             Blogger starter kit
-                        </NuxtLink>
-                        <NuxtLink to="https://fider.blogtally.com/" target="_blank" data-blogtally-event="Feedback">
-                            Feedback
                         </NuxtLink>
                     </div>
                 </div>
@@ -74,11 +64,14 @@
                         Starting
                     </div>
                     <div class="flex flex-col gap-2 links">
-                        <NuxtLink to="/quizz" data-blogtally-event="Quizz">
-                            Which blogging platform should you choose?
+                        <NuxtLink to="/quiz/cms" data-blogtally-event="Quizz">
+                            Which CMS should you choose?
+                        </NuxtLink>
+                        <NuxtLink to="/quiz/analytics" data-blogtally-event="Quizz">
+                            Which analytics should you choose?
                         </NuxtLink>
                         <NuxtLink to="/cms" data-blogtally-event="Resources">
-                            CMS
+                            CMS for bloggers
                         </NuxtLink>
                         <NuxtLink to="/hosting" data-blogtally-event="Resources">
                             Blog hosting solutions

@@ -32,6 +32,12 @@ export default defineNuxtConfig({
     },
   },
 
+  nitro: {
+    routeRules: {
+      '/quizz': { redirect: '/quiz/cms' }
+    }
+  },
+
   css: ['~/assets/css/style.css'],
 
   compatibilityDate: '2024-11-01',

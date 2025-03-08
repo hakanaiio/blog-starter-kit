@@ -1,9 +1,9 @@
 <template>
     <div class="c-main">
         <LandingHeader />
-        <main class="pt-28 c-main">
-            <div class="mt-12">
-                <ResourceQuizz />
+        <main class="pt-48 c-main">
+            <div class="">
+                <ResourceQuizz :category="quizId" />
             </div>
         </main>
         <LandingFooter />
@@ -18,6 +18,8 @@ import ResourceQuizz from '~/components/resources/ResourceQuizz.vue'
 const config = useRuntimeConfig()
 const route = useRoute()
 const fullUrl = `${config.public.baseUrl}${route.path}`
+
+const quizId = route.params.quizzId
 
 const description = 'The Blogger starter kit is a collection of resources to help you start your blog.'
 const title = 'Blogger starter kit'

@@ -1,7 +1,7 @@
 <template>
     <div class="w-full max-w-7xl mx-auto p-6 bg-albescent-white-100 rounded-lg shadow-lg">
         <h1 class="text-3xl font-bold text-center mb-8">
-            What is the best blogging platform for you?
+            What is the best {{ category }} for you?
         </h1>
 
         <div class="flex flex-col items-center justify-center gap-8">
@@ -11,14 +11,20 @@
                     🎉
                 </div>
                 <h2 class="text-2xl font-bold text-purple-600 mb-4">
-                    Quiz terminé !
+                    Congratulations!
                 </h2>
                 <p class="mb-6">
-                    Merci d'avoir répondu à toutes les questions. Voici nos recommandations basées sur vos réponses.
+                    You have completed the quiz. Here are the recommended resources based on your answers.
                 </p>
                 <p class="text-sm text-gray-600">
-                    Faites défiler pour voir vos réponses et les ressources recommandées.
+                    Scroll down to see your answers and the recommended resources.
                 </p>
+                <button
+                    class="mt-4 px-4 py-2 bg-albescent-white-100 hover:bg-albescent-white-200 rounded-lg transition-colors"
+                    @click="resetQuiz"
+                >
+                    Restart the quiz
+                </button>
             </div>
 
             <div v-if="!completed" class="w-full">
@@ -37,12 +43,12 @@
                     </div>
 
                     <h2 class="text-xl font-semibold mb-6">
-                        {{ questions[currentQuestion].text }}
+                        {{ questions[currentQuestion]?.text }}
                     </h2>
 
                     <div class="space-y-3">
                         <button
-                            v-for="option in questions[currentQuestion].options"
+                            v-for="option in questions[currentQuestion]?.options"
                             :key="option.id"
                             :class="`w-full text-left p-4 rounded-lg transition-colors flex items-center
         ${isOptionSelected(option)
@@ -69,12 +75,12 @@
                         </button>
 
                         <button
-                            v-if="questions[currentQuestion].isMultiSelect"
+                            v-if="questions[currentQuestion]?.isMultiSelect"
                             class="px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg transition-colors text-white"
                             :disabled="!canContinue"
                             @click="handleContinue"
                         >
-                            {{ isLastQuestion ? 'Finaliser le quiz →' : 'Continue →' }}
+                            {{ isLastQuestion ? 'End the quiz →' : 'Continue →' }}
                         </button>
 
                         <button
@@ -183,10 +189,28 @@
 <script setup lang="ts">
 import {computed, onMounted, ref} from 'vue'
 import ResourceCard from '~/components/resources/ResourceCard.vue'
-import questions from '~/utils/quizz.json'
+import {quizMapping} from '~/utils/static-import-quizz'
 
+const props = defineProps<{
+    category: string,
+}>()
+
+
+function getQuizQuestions() {
+    const categoryKey = props.category.split('.')[0]
+    return quizMapping[categoryKey] || defaultQuiz
+}
+
+const questions = ref(getQuizQuestions())
 const resources = useResources()
-const allItems = ref(resources.getAllItems())
+
+const allItems = ref([])
+const isCategory = resources.isCategory(props.category)
+if (isCategory) {
+    allItems.value = resources.getAllItemsByCategory(props.category)
+} else {
+    allItems.value = resources.getItemsBySubcategoryIdOnly(props.category)
+}
 const allCategories = ref(resources.getAllCategories())
 
 const currentQuestion = ref(0)
@@ -194,7 +218,8 @@ const answers = ref<Record<string, string>>({})
 const completed = ref(false)
 const filteredItems = ref<any[]>([])
 
-onMounted(() => {
+
+onMounted(async () => {
     filteredItems.value = allItems.value
 })
 
@@ -202,7 +227,7 @@ onMounted(() => {
 const progress = computed(() => {
     const totalAvailableQuestions = availableQuestions.value.length
     const currentIndex = availableQuestions.value.findIndex(q =>
-        q.id === questions[currentQuestion.value].id
+        q.id === questions.value[currentQuestion.value].id
     )
 
     return ((currentIndex + 1) / totalAvailableQuestions) * 100
@@ -210,18 +235,18 @@ const progress = computed(() => {
 
 // Vérifier si c'est la dernière question
 const isLastQuestion = computed(() => {
-    const currentId = questions[currentQuestion.value].id
+    const currentId = questions.value[currentQuestion.value].id
     const currentAvailableIndex = availableQuestions.value.findIndex(q => q.id === currentId)
     return currentAvailableIndex === availableQuestions.value.length - 1
 })
 
 function getNextQuestionIndex() {
-    const currentId = questions[currentQuestion.value].id
+    const currentId = questions.value[currentQuestion.value].id
     const currentAvailableIndex = availableQuestions.value.findIndex(q => q.id === currentId)
 
     if (currentAvailableIndex < availableQuestions.value.length - 1) {
         const nextAvailableQuestion = availableQuestions.value[currentAvailableIndex + 1]
-        return questions.findIndex(q => q.id === nextAvailableQuestion.id)
+        return questions.value.findIndex(q => q.id === nextAvailableQuestion.id)
     }
 
     return -1 // No next question available
@@ -230,7 +255,7 @@ function getNextQuestionIndex() {
 
 // Obtenir une question par son ID
 const getQuestionById = (questionId: string) => {
-    return questions.find(q => q.id === questionId)
+    return questions.value.find(q => q.id === questionId)
 }
 
 // Obtenir une option par son ID
@@ -239,7 +264,7 @@ const getOptionById = (questionId: string, optionId: string) => {
     return question?.options.find(o => o.id === optionId)
 }
 const availableQuestions = computed(() => {
-    return questions.filter(question => {
+    return questions.value.filter(question => {
         // If question has no dependencies, it's always available
         if (!question.dependsOn) return true
 
@@ -414,9 +439,9 @@ function getItemCategories(item) {
 
 
 function isOptionSelected(option) {
-    const currentQuestionId = questions[currentQuestion.value].id
+    const currentQuestionId = questions.value[currentQuestion.value].id
 
-    if (questions[currentQuestion.value].isMultiSelect) {
+    if (questions.value[currentQuestion.value].isMultiSelect) {
         return answers.value[currentQuestionId] && answers.value[currentQuestionId].includes(option.id)
     } else {
         return answers.value[currentQuestionId] === option.id
@@ -439,16 +464,16 @@ function handleContinue() {
 
 // Determine if user can continue (has selected at least one option for multi-select)
 const canContinue = computed(() => {
-    const currentQuestionId = questions[currentQuestion.value].id
-    if (!questions[currentQuestion.value].isMultiSelect) return true
+    const currentQuestionId = questions.value[currentQuestion.value].id
+    if (!questions.value[currentQuestion.value].isMultiSelect) return true
 
     return answers.value[currentQuestionId] && answers.value[currentQuestionId].length > 0
 })
 
 // Gérer la sélection d'une option
 function handleOptionSelect(option: any) {
-    const currentQuestionId = questions[currentQuestion.value].id
-    const currentQuestionObj = questions[currentQuestion.value]
+    const currentQuestionId = questions.value[currentQuestion.value].id
+    const currentQuestionObj = questions.value[currentQuestion.value]
 
     // Handle option selection (same as your original code)
     if (currentQuestionObj.isMultiSelect) {
@@ -486,12 +511,12 @@ function handleOptionSelect(option: any) {
 // Revenir à la question précédente
 function handleBack() {
     if (currentQuestion.value > 0) {
-        const currentId = questions[currentQuestion.value].id
+        const currentId = questions.value[currentQuestion.value].id
         const currentAvailableIndex = availableQuestions.value.findIndex(q => q.id === currentId)
 
         if (currentAvailableIndex > 0) {
             const prevAvailableQuestion = availableQuestions.value[currentAvailableIndex - 1]
-            currentQuestion.value = questions.findIndex(q => q.id === prevAvailableQuestion.id)
+            currentQuestion.value = questions.value.findIndex(q => q.id === prevAvailableQuestion.id)
         } else {
             // If we're at the first available question, go to the first question overall
             currentQuestion.value = 0
@@ -506,37 +531,55 @@ function resetQuiz() {
     completed.value = false
     filteredItems.value = allItems.value
 }
-
 // Grouper les ressources filtrées par catégorie pour l'affichage
 const groupedResources = computed(() => {
     const groups: { title: string; items: any[] }[] = []
 
-    // Parcourir toutes les catégories
-    allCategories.value.forEach(category => {
-        // Pour chaque catégorie, collecter tous les items des sous-catégories
-        const categoryItems: any[] = []
+    if (isCategory) {
+        // Case 1: When the quiz is for a main category
+        // Find the category and process its subcategories
+        const category = allCategories.value.find(cat => cat.id === props.category)
 
-        category.subcategories.forEach(subcategory => {
-            // Pour chaque sous-catégorie, trouver les items qui sont dans les résultats filtrés
-            const subcategoryItems = resources.getItemsBySubcategoryId(category.id, subcategory.id)
-                .filter(item => filteredItems.value.some(filteredItem => filteredItem.id === item.id))
+        if (category) {
+            // For each subcategory in this category, collect matching filtered items
+            category.subcategories.forEach(subcategory => {
+                const subcategoryItems = resources.getItemsBySubcategoryId(category.id, subcategory.id)
+                    .filter(item => filteredItems.value.some(filteredItem => filteredItem.id === item.id))
 
-            // Ajouter uniquement les items qui ne sont pas déjà dans categoryItems
-            subcategoryItems.forEach(item => {
-                if (!categoryItems.some(existingItem => existingItem.id === item.id)) {
-                    categoryItems.push(item)
+                // If we have any items in this subcategory after filtering, add as a group
+                if (subcategoryItems.length > 0) {
+                    groups.push({
+                        title: subcategory.name,
+                        items: subcategoryItems
+                    })
                 }
             })
-        })
-
-        // Si des items ont été trouvés dans cette catégorie, ajouter la catégorie au groupe
-        if (categoryItems.length > 0) {
-            groups.push({
-                title: category.name,
-                items: categoryItems
-            })
         }
-    })
+    } else {
+        // Case 2: When the quiz is for a specific subcategory
+        // We need to find which category contains this subcategory
+        for (const category of allCategories.value) {
+            const subcategory = category.subcategories.find(sub =>
+                `${sub.id}` === props.category
+            )
+
+            if (subcategory) {
+                // We found the matching subcategory
+                const subcategoryItems = resources.getItemsBySubcategoryId(category.id, subcategory.id)
+                    .filter(item => filteredItems.value.some(filteredItem => filteredItem.id === item.id))
+
+                if (subcategoryItems.length > 0) {
+                    groups.push({
+                        title: subcategory.name,
+                        items: subcategoryItems
+                    })
+                }
+
+                // No need to continue searching
+                break
+            }
+        }
+    }
 
     return groups
 })
