@@ -57,6 +57,10 @@
                         <NuxtLink to="/" :external="true" data-blogtally-event="Resources">
                             Blogger starter kit
                         </NuxtLink>
+                        <NuxtLink to="https://github.com/blogtally/blog-starter-kit" :external="true" class="flex">
+                            <Icon name="fa6-brands:github" size="4" />
+                            Contribute on github
+                        </NuxtLink>
                     </div>
                 </div>
                 <div>
@@ -90,6 +94,7 @@
 </template>
 
 <script setup lang="ts">
+import {Icon} from '@iconify/vue'
 </script>
 <style lang="scss" scoped>
 .link-header {
