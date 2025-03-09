@@ -4,6 +4,7 @@
         "id": "pirsch",
         "name": "Pirsch Analytics",
         "description": "Privacy-focused web analytics platform that provides insights about your visitors without compromising their privacy.",
+        "logo": "/logos/pirsch.png",
         "url": "https://pirsch.io",
         "pros": [
           "GDPR compliant and privacy-friendly",
@@ -19,7 +20,48 @@
         ],
         "pricing": "from $6/month for commercial sites",
         "tags": ["analytics", "privacy", "gdpr", "web-stats"],
-        "quizzTags": ["affordable", "analytics", "privacy", "simple", "beginner", "lightweight", "performance"]
+        "quizzTags": ["affordable", "analytics", "privacy", "simple", "beginner", "lightweight", "performance"],
+        "features": [
+          {"key": "Cookieless tracking", "value": "Yes"},
+          {"key": "Real-time dashboard", "value": "Yes"},
+          {"key": "Data retention period", "value": "Unlimited", "comment": "On all paid plans"},
+          {"key": "Custom event tracking", "value": "Yes"},
+          {"key": "Conversion/goal tracking", "value": "Yes"},
+          {"key": "Heatmaps/Click maps", "value": "No"},
+
+          {"key": "Active Reading time", "value": "No"},
+          {"key": "Session duration", "value": "Yes"},
+          {"key": "Bounce rate", "value": "Yes"},
+          {"key": "Traffic sources", "value": "Yes"},
+          {"key": "Most popular content", "value": "Yes"},
+          {"key": "User journey", "value": "Limited", "comment": "Basic entry/exit page analysis"},
+          {"key": "Download tracking", "value": "Yes"},
+          {"key": "Internal search tracking", "value": "Limited", "comment": "Possible via custom events"},
+
+          {"key": "Self-hosted", "value": "No"},
+          {"key": "Open source", "value": "Partial", "comment": "Client script is open source, backend is closed source"},
+          {"key": "Cloud managed version", "value": "Yes"},
+          {"key": "API available", "value": "Yes"},
+          {"key": "Data export options", "value": "Yes", "comment": "CSV, JSON"},
+          {"key": "CMS integrations", "value": "Yes", "comment": "WordPress, Hugo, Ghost, Gatsby plugins available"},
+
+          {"key": "Conversion funnels", "value": "Limited", "comment": "Basic conversion path analysis"},
+          {"key": "User segmentation", "value": "Yes", "comment": "Filter by device, browser, country, referrer"},
+          {"key": "Cohorts", "value": "No"},
+          {"key": "A/B testing", "value": "No"},
+          {"key": "User flow visualization", "value": "No"},
+          {"key": "Session recording", "value": "No"},
+
+          {"key": "Multi-user/access management", "value": "Yes"},
+          {"key": "White-labeling/customization", "value": "Yes", "comment": "On higher plans"},
+          {"key": "Automated reports/alerts", "value": "Yes", "comment": "Email reports available"},
+          {"key": "IP filtering", "value": "Yes"},
+
+          {"key": "GDPR/CCPA compliance", "value": "Yes"},
+          {"key": "Cookie banner requirement", "value": "No", "comment": "No cookies used, no banner needed"},
+          {"key": "Privacy options", "value": "Yes", "comment": "Enhanced privacy features, IP anonymization"},
+          {"key": "Visitor consent required", "value": "No"}
+        ]
       },
       {
         "id": "matomo",
@@ -41,7 +83,48 @@
         ],
         "pricing": "Self-hosted: Free (open source), Cloud: from €19/month",
         "tags": ["free", "analytics", "open-source", "privacy", "tracking", "self-hosted"],
-        "quizzTags": ["analytics", "privacy", "open-source", "self-hosted", "advanced", "technical", "comprehensive"]
+        "quizzTags": ["analytics", "privacy", "open-source", "self-hosted", "advanced", "technical", "comprehensive"],
+        "features": [
+          {"key": "Cookieless tracking", "value": "Yes", "comment": "Uses first-party cookies by default, but has a cookieless option"},
+          {"key": "Real-time dashboard", "value": "Yes"},
+          {"key": "Data retention period", "value": "Unlimited", "comment": "Self-configurable retention period in self-hosted version"},
+          {"key": "Custom event tracking", "value": "Yes", "comment": "Very extensive event tracking capabilities"},
+          {"key": "Conversion/goal tracking", "value": "Yes", "comment": "Advanced goal and funnel tracking"},
+          {"key": "Heatmaps/Click maps", "value": "Yes", "comment": "Via Heatmap & Session Recording plugin"},
+
+          {"key": "Active reading time", "value": "No"},
+          {"key": "Session duration", "value": "Yes"},
+          {"key": "Bounce rate", "value": "Yes"},
+          {"key": "Traffic sources", "value": "Yes", "comment": "Detailed referrer and campaign tracking"},
+          {"key": "Most popular content", "value": "Yes"},
+          {"key": "User journey", "value": "Yes", "comment": "Detailed user flow reports"},
+          {"key": "Download tracking", "value": "Yes"},
+          {"key": "Internal search tracking", "value": "Yes", "comment": "Built-in site search analytics"},
+
+          {"key": "Self-hosted", "value": "Yes"},
+          {"key": "Open source", "value": "Yes", "comment": "GPL license"},
+          {"key": "Cloud managed version", "value": "Yes", "comment": "Matomo Cloud with various pricing tiers"},
+          {"key": "API available", "value": "Yes"},
+          {"key": "Data export options", "value": "Yes", "comment": "CSV, TSV, XML, JSON, PHP, RSS"},
+          {"key": "CMS integrations", "value": "Yes", "comment": "WordPress, Drupal, Joomla, Magento, and many more"},
+
+          {"key": "Conversion funnels", "value": "Yes", "comment": "Advanced funnel visualization and analysis"},
+          {"key": "User segmentation", "value": "Yes", "comment": "Advanced segmentation capabilities"},
+          {"key": "Cohorts", "value": "Yes", "comment": "Available with additional plugin"},
+          {"key": "A/B testing", "value": "Yes", "comment": "Via A/B Testing plugin"},
+          {"key": "User flow visualization", "value": "Yes"},
+          {"key": "Session recording", "value": "Yes", "comment": "Via Heatmap & Session Recording plugin"},
+
+          {"key": "Multi-user/access management", "value": "Yes", "comment": "Comprehensive user and permission management"},
+          {"key": "White-labeling/customization", "value": "Yes", "comment": "Highly customizable UI and branding"},
+          {"key": "Automated reports/alerts", "value": "Yes", "comment": "Scheduled email reports and custom alerts"},
+          {"key": "IP filtering", "value": "Yes", "comment": "Advanced IP exclusion and anonymization options"},
+
+          {"key": "GDPR/CCPA compliance", "value": "Yes"},
+          {"key": "Cookie banner requirement", "value": "Yes", "comment": "Required if using default cookie-based tracking"},
+          {"key": "Privacy options", "value": "Yes", "comment": "Extensive privacy features including data anonymization"},
+          {"key": "Visitor consent required", "value": "Configurable", "comment": "Can be configured to respect visitor consent"}
+        ]
       },
     {
       "id": "plausible",
@@ -63,7 +146,47 @@
       ],
       "pricing": "From $9/month based on pageviews",
       "tags": ["analytics", "privacy", "lightweight", "open-source"],
-      "quizzTags": ["free", "analytics", "privacy", "simple", "lightweight", "performance", "beginner-friendly"]
+      "quizzTags": ["free", "analytics", "privacy", "simple", "lightweight", "performance", "beginner-friendly"],
+      "features": [
+        {"key": "Cookieless tracking", "value": "Yes"},
+        {"key": "Real-time dashboard", "value": "Yes"},
+        {"key": "Data retention period", "value": "Unlimited"},
+        {"key": "Custom event tracking", "value": "Yes"},
+        {"key": "Conversion/goal tracking", "value": "Yes", "comment": "Goal conversion tracking"},
+        {"key": "Heatmaps/Click maps", "value": "No"},
+
+        {"key": "Session duration", "value": "Yes"},
+        {"key": "Bounce rate", "value": "Yes", "comment": "Called 'Visit duration' in Plausible"},
+        {"key": "Traffic sources", "value": "Yes"},
+        {"key": "Most popular content", "value": "Yes"},
+        {"key": "User journey", "value": "No"},
+        {"key": "Download tracking", "value": "Yes", "comment": "Via custom events"},
+        {"key": "Internal search tracking", "value": "Limited", "comment": "Via custom events"},
+
+        {"key": "Self-hosted", "value": "Yes", "comment": "Self-hosted version available on GitHub"},
+        {"key": "Open source", "value": "Yes", "comment": "AGPL license"},
+        {"key": "Cloud managed version", "value": "Yes"},
+        {"key": "API available", "value": "Yes", "comment": "Stats API and events API"},
+        {"key": "Data export options", "value": "Yes", "comment": "CSV export of all stats"},
+        {"key": "CMS integrations", "value": "Yes", "comment": "WordPress, Ghost, Webflow, and more"},
+
+        {"key": "Conversion funnels", "value": "No"},
+        {"key": "User segmentation", "value": "Limited", "comment": "Basic filtering by UTM tags, device, country"},
+        {"key": "Cohorts", "value": "No"},
+        {"key": "A/B testing", "value": "No"},
+        {"key": "User flow visualization", "value": "No"},
+        {"key": "Session recording", "value": "No"},
+
+        {"key": "Multi-user/access management", "value": "Yes"},
+        {"key": "White-labeling/customization", "value": "Yes", "comment": "Custom domain on higher plans"},
+        {"key": "Automated reports/alerts", "value": "Yes", "comment": "Weekly/monthly email reports"},
+        {"key": "IP filtering", "value": "Yes"},
+
+        {"key": "GDPR/CCPA compliance", "value": "Yes", "comment": "Built with privacy regulations in mind"},
+        {"key": "Cookie banner requirement", "value": "No"},
+        {"key": "Privacy options", "value": "Yes", "comment": "Privacy-first approach, no personal data collection"},
+        {"key": "Visitor consent required", "value": "No"}
+      ]
     },
     {
       "id": "fathom",
@@ -85,7 +208,47 @@
       ],
       "pricing": "From $14/month for 100,000 page views (annual billing)",
       "tags": ["analytics", "privacy", "gdpr-compliant", "cookie-free", "simple"],
-      "quizzTags": ["budget", "analytics", "privacy", "gdpr-compliant", "cookie-free", "simple", "fast"]
+      "quizzTags": ["budget", "analytics", "privacy", "gdpr-compliant", "cookie-free", "simple", "fast"],
+      "features": [
+        {"key": "Cookieless tracking", "value": "Yes"},
+        {"key": "Real-time dashboard", "value": "Yes"},
+        {"key": "Data retention period", "value": "Unlimited"},
+        {"key": "Custom event tracking", "value": "Yes"},
+        {"key": "Conversion/goal tracking", "value": "Yes"},
+        {"key": "Heatmaps/Click maps", "value": "No"},
+
+        {"key": "Session duration", "value": "Yes"},
+        {"key": "Bounce rate", "value": "No", "comment": "Uses 'Unique visitors' and 'Views' metrics instead"},
+        {"key": "Traffic sources", "value": "Yes"},
+        {"key": "Most popular content", "value": "Yes"},
+        {"key": "User journey", "value": "No"},
+        {"key": "Download tracking", "value": "Yes", "comment": "Via custom events"},
+        {"key": "Internal search tracking", "value": "Limited", "comment": "Via custom events"},
+
+        {"key": "Self-hosted", "value": "No", "comment": "Cloud only, older v1 is still available for self-hosting"},
+        {"key": "Open source", "value": "No", "comment": "Closed source (v1 was open source but is now deprecated)"},
+        {"key": "Cloud managed version", "value": "Yes"},
+        {"key": "API available", "value": "Yes"},
+        {"key": "Data export options", "value": "Yes", "comment": "CSV export"},
+        {"key": "CMS integrations", "value": "Yes", "comment": "WordPress, Ghost, Webflow, and more"},
+
+        {"key": "Conversion funnels", "value": "No"},
+        {"key": "User segmentation", "value": "Limited", "comment": "Basic filtering by device, browser, referrer"},
+        {"key": "Cohorts", "value": "No"},
+        {"key": "A/B testing", "value": "No"},
+        {"key": "User flow visualization", "value": "No"},
+        {"key": "Session recording", "value": "No"},
+
+        {"key": "Multi-user/access management", "value": "Yes"},
+        {"key": "White-labeling/customization", "value": "Yes", "comment": "Custom domain and email on higher plans"},
+        {"key": "Automated reports/alerts", "value": "Yes", "comment": "Weekly email reports"},
+        {"key": "IP filtering", "value": "Yes"},
+
+        {"key": "GDPR/CCPA compliance", "value": "Yes", "comment": "EU-hosted servers available, privacy-focused approach"},
+        {"key": "Cookie banner requirement", "value": "No", "comment": "No cookies used, no banner needed"},
+        {"key": "Privacy options", "value": "Yes", "comment": "Zero personal data collection"},
+        {"key": "Visitor consent required", "value": "No"}
+      ]
     },
     {
       "id": "umami",
@@ -107,7 +270,48 @@
       ],
       "pricing": "Self-hosted: Free (open source), Cloud: from $9/month",
       "tags": ["analytics", "privacy", "open-source", "lightweight"],
-      "quizzTags": ["free", "analytics", "privacy", "open-source", "self-hosted", "lightweight", "technical"]
+      "quizzTags": ["free", "analytics", "privacy", "open-source", "self-hosted", "lightweight", "technical"],
+      "features": [
+        {"key": "Cookieless tracking", "value": "Yes"},
+        {"key": "Real-time dashboard", "value": "Yes"},
+        {"key": "Data retention period", "value": "Unlimited", "comment": "Unlimited in self-hosted version, depends on plan for cloud version"},
+        {"key": "Custom event tracking", "value": "Yes"},
+        {"key": "Conversion/goal tracking", "value": "Limited", "comment": "Possible via custom events"},
+        {"key": "Heatmaps/Click maps", "value": "No"},
+
+        {"key": "Active Reading time", "value": "No"},
+        {"key": "Session duration", "value": "Yes"},
+        {"key": "Bounce rate", "value": "Yes"},
+        {"key": "Traffic sources", "value": "Yes"},
+        {"key": "Most popular content", "value": "Yes"},
+        {"key": "User journey", "value": "No"},
+        {"key": "Download tracking", "value": "Limited", "comment": "Possible via custom events"},
+        {"key": "Internal search tracking", "value": "Limited", "comment": "Possible via custom events"},
+
+        {"key": "Self-hosted", "value": "Yes"},
+        {"key": "Open source", "value": "Yes"},
+        {"key": "Cloud managed version", "value": "Yes"},
+        {"key": "API available", "value": "Yes"},
+        {"key": "Data export options", "value": "Yes", "comment": "CSV export of reports"},
+        {"key": "CMS integrations", "value": "Yes", "comment": "Plugins available for WordPress, Ghost, etc."},
+
+        {"key": "Conversion funnels", "value": "No"},
+        {"key": "User segmentation", "value": "Limited", "comment": "Basic segmentation by country, browser, operating system"},
+        {"key": "Cohorts", "value": "No"},
+        {"key": "A/B testing", "value": "No"},
+        {"key": "User flow visualization", "value": "No"},
+        {"key": "Session recording", "value": "No"},
+
+        {"key": "Multi-user/access management", "value": "Yes"},
+        {"key": "White-labeling/customization", "value": "Limited"},
+        {"key": "Automated reports/alerts", "value": "No"},
+        {"key": "IP filtering", "value": "Yes"},
+
+        {"key": "GDPR/CCPA compliance", "value": "Yes"},
+        {"key": "Cookie banner requirement", "value": "No", "comment": "No banner needed as it doesn't use cookies"},
+        {"key": "Privacy options", "value": "Yes"},
+        {"key": "Visitor consent required", "value": "No"}
+      ]
     },
       {
         "id": "blogtallypulse",
@@ -131,7 +335,48 @@
         ],
         "pricing": "From $5/month based on site size",
         "tags": ["analytics", "blog-specific", "analytics-blog", "content-metrics", "engagement"],
-        "quizzTags": ["analytics", "blog", "content", "engagement", "affordable", "beginner"]
+        "quizzTags": ["analytics", "blog", "content", "engagement", "affordable", "beginner"],
+        "features": [
+          {"key": "Cookieless tracking", "value": "Yes"},
+          {"key": "Real-time dashboard", "value": "Yes"},
+          {"key": "Data retention period", "value": "Unlimited", "comment" :  "depends on plan"},
+          {"key": "Custom event tracking", "value": "Yes"},
+          {"key": "Conversion/goal tracking", "value": "No"},
+          {"key": "Heatmaps/Click maps", "value": "No"},
+
+          {"key": "Active reading time", "value": "Yes"},
+          {"key": "Session duration", "value": "Yes"},
+          {"key": "Bounce rate", "value": "No"},
+          {"key": "Traffic sources", "value": "Yes"},
+          {"key": "Most popular content", "value": "Yes"},
+          {"key": "User journey", "value": "No"},
+          {"key": "Download tracking", "value": "Yes", "comment": "Via custom events"},
+          {"key": "Internal search tracking", "value": "Limited", "comment": "Via custom events"},
+
+          {"key": "Self-hosted", "value": "No" },
+          {"key": "Open source", "value": "No"},
+          {"key": "Cloud managed version", "value": "Yes"},
+          {"key": "API available", "value": "No"},
+          {"key": "Data export options", "value": "No"},
+          {"key": "CMS integrations", "value": "Yes", "comment": "WordPress, Ghost, Webflow, and more"},
+
+          {"key": "Conversion funnels", "value": "No"},
+          {"key": "User segmentation", "value": "Yes", "comment": "Filtering by device, browser, referrer, os, platform"},
+          {"key": "Cohorts", "value": "No"},
+          {"key": "A/B testing", "value": "Limited", "comment": "Via custom events"},
+          {"key": "User flow visualization", "value": "No"},
+          {"key": "Session recording", "value": "No"},
+
+          {"key": "Multi-user/access management", "value": "No"},
+          {"key": "White-labeling/customization", "value": "No"},
+          {"key": "Automated reports/alerts", "value": "No"},
+          {"key": "IP filtering", "value": "No"},
+
+          {"key": "GDPR/CCPA compliance", "value": "Yes"},
+          {"key": "Cookie banner requirement", "value": "No", "comment": "No cookies used, no banner needed"},
+          {"key": "Privacy options", "value": "Yes", "comment": "Zero personal data collection"},
+          {"key": "Visitor consent required", "value": "No"}
+        ]
       },
       {
         "id": "disqus",

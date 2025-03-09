@@ -133,6 +133,44 @@
                 </p>
             </div>
 
+            <div v-if="item.features && item.features.length > 0" class="content-section features-section">
+                <h2 class="section-title">
+                    Features
+                </h2>
+
+                <div class="features-table-container">
+                    <table class="features-table">
+                        <thead>
+                            <tr>
+                                <th class="feature-name-header">
+                                    Feature
+                                </th>
+                                <th class="feature-value-header">
+                                    Support
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="(feature, index) in item.features" :key="index" class="feature-row">
+                                <td class="feature-name">
+                                    {{ feature.key }}
+                                </td>
+                                <td class="feature-value">
+                                    <div class="feature-status-container">
+                                        <span class="feature-status" :class="getFeatureStatusClass(feature.value)">
+                                            {{ feature.value }}
+                                        </span>
+                                        <span v-if="feature.comment" class="feature-comment">
+                                            {{ feature.comment }}
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
             <div class="content-section actions">
                 <NuxtLink
                     :to="item.url"
@@ -242,6 +280,19 @@ const resourceLocations = computed(() => {
     if (!item) return []
     return getSubcategoriesContainingItem(item.id)
 })
+
+const getFeatureStatusClass = (value: string): string => {
+    const normalizedValue = value.toLowerCase()
+    if (normalizedValue === 'yes' || normalizedValue === 'unlimited' || normalizedValue === 'excellent' || normalizedValue === 'both') {
+        return 'status-positive'
+    } else if (normalizedValue === 'no') {
+        return 'status-negative'
+    } else if (normalizedValue === 'limited' || normalizedValue === 'partial' || normalizedValue === 'configurable') {
+        return 'status-partial'
+    } else {
+        return 'status-neutral'
+    }
+}
 
 // Get initials from resource name for placeholder
 const getInitials = (name: string): string => {
@@ -487,5 +538,64 @@ const getCategories = (item: ResourceItem) => {
 
 .resource-tag {
   @apply text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full;
+}
+.features-section {
+  @apply mt-8;
+}
+
+.features-table-container {
+  @apply overflow-x-auto;
+}
+
+.features-table {
+  @apply w-full border-collapse;
+}
+
+.feature-name-header, .feature-value-header {
+  @apply px-4 py-3 text-left bg-gray-50 border-b border-gray-200 font-medium text-gray-700;
+}
+
+.feature-name-header {
+  @apply w-1/2;
+}
+
+.feature-row {
+  @apply border-b border-gray-100 hover:bg-gray-50 transition-colors;
+}
+
+.feature-name {
+  @apply px-4 py-3 font-medium text-gray-800;
+}
+
+.feature-value {
+  @apply px-4 py-3;
+}
+
+.feature-status-container {
+  @apply flex flex-col;
+}
+
+.feature-status {
+  @apply inline-flex items-center px-2 py-1 rounded text-sm font-medium;
+}
+
+.status-positive {
+  @apply bg-green-100 text-green-800;
+}
+
+.status-negative {
+  @apply bg-red-100 text-red-800;
+}
+
+.status-partial {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.status-neutral {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.feature-comment {
+  @apply text-xs text-gray-600 mt-1;
 }
 </style>
