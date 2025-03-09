@@ -12,6 +12,28 @@ declare global {
         tags?: string[];
         quizzTags?: string[];
         logo?: string;
+        features: Feature[];
+    }
+
+    interface FeatureCategory {
+        id: string;
+        name: string;
+        features: string[];
+    }
+
+    interface FeatureSection {
+        name: string;
+        categories: FeatureCategory[];
+    }
+
+    interface FeaturesData {
+        [key: string]: FeatureSection;
+    }
+
+    interface Feature {
+        key: string;
+        value: string;
+        comment?: string;
     }
 
     interface Subcategory {

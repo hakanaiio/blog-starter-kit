@@ -1,0 +1,76 @@
+{
+  "tools.analytics": {
+    "name": "Analytics",
+    "categories": [
+      {
+        "id": "basics",
+        "name": "Basic Features",
+        "features": [
+          "Cookieless tracking",
+          "Real-time dashboard",
+          "Data retention period",
+          "Custom event tracking",
+          "Conversion/goal tracking",
+          "Heatmaps/Click maps"
+        ]
+      },
+      {
+        "id": "content",
+        "name": "Content Analytics",
+        "features": [
+          "Session duration",
+          "Bounce rate",
+          "Traffic sources",
+          "Most popular content",
+          "User journey",
+          "Download tracking",
+          "Internal search tracking"
+        ]
+      },
+      {
+        "id": "technical",
+        "name": "Technical",
+        "features": [
+          "Self-hosted",
+          "Open source",
+          "Cloud managed version",
+          "API available",
+          "Data export options",
+          "CMS integrations"
+        ]
+      },
+      {
+        "id": "advanced",
+        "name": "Advanced Features",
+        "features": [
+          "Conversion funnels",
+          "User segmentation",
+          "Cohorts",
+          "A/B testing",
+          "User flow visualization",
+          "Session recording"
+        ]
+      },
+      {
+        "id": "admin",
+        "name": "Administration",
+        "features": [
+          "Multi-user/access management",
+          "White-labeling/customization",
+          "Automated reports/alerts",
+          "IP filtering"
+        ]
+      },
+      {
+        "id": "privacy",
+        "name": "Privacy & Compliance",
+        "features": [
+          "GDPR/CCPA compliance",
+          "Cookie banner requirement",
+          "Privacy options",
+          "Visitor consent required"
+        ]
+      }
+    ]
+  }
+}

@@ -133,43 +133,11 @@
                 </p>
             </div>
 
-            <div v-if="item.features && item.features.length > 0" class="content-section features-section">
-                <h2 class="section-title">
-                    Features
-                </h2>
-
-                <div class="features-table-container">
-                    <table class="features-table">
-                        <thead>
-                            <tr>
-                                <th class="feature-name-header">
-                                    Feature
-                                </th>
-                                <th class="feature-value-header">
-                                    Support
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr v-for="(feature, index) in item.features" :key="index" class="feature-row">
-                                <td class="feature-name">
-                                    {{ feature.key }}
-                                </td>
-                                <td class="feature-value">
-                                    <div class="feature-status-container">
-                                        <span class="feature-status" :class="getFeatureStatusClass(feature.value)">
-                                            {{ feature.value }}
-                                        </span>
-                                        <span v-if="feature.comment" class="feature-comment">
-                                            {{ feature.comment }}
-                                        </span>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+            <FeatureTable
+                v-if="item.features && item.features.length > 0"
+                :features="item.features"
+                :item-id="item.id"
+            />
 
             <div class="content-section actions">
                 <NuxtLink
@@ -261,40 +229,26 @@
 
 <script setup lang="ts">
 import {ContentDoc} from '#components'
-import {Icon} from '@iconify/vue' // Get the item ID from the route
+import {Icon} from '@iconify/vue'
+import FeatureTable from '~/components/resources/FeatureTable.vue'
+import {useFeatures} from '#imports'
 
-// Get the item ID from the route
 const route = useRoute()
 const itemId = route.params.itemId as string
 
-// Fetch data using our composable
 const { getItemById, getSubcategoriesContainingItem, getAllItems } = useResources()
+const { getDomainFromTags } = useFeatures()
 const item = getItemById(itemId)
 
 const longDescription = computed(() => {
     return item && item.contentSlug
 })
 
-// Get all categories/subcategories where this resource appears
 const resourceLocations = computed(() => {
     if (!item) return []
     return getSubcategoriesContainingItem(item.id)
 })
 
-const getFeatureStatusClass = (value: string): string => {
-    const normalizedValue = value.toLowerCase()
-    if (normalizedValue === 'yes' || normalizedValue === 'unlimited' || normalizedValue === 'excellent' || normalizedValue === 'both') {
-        return 'status-positive'
-    } else if (normalizedValue === 'no') {
-        return 'status-negative'
-    } else if (normalizedValue === 'limited' || normalizedValue === 'partial' || normalizedValue === 'configurable') {
-        return 'status-partial'
-    } else {
-        return 'status-neutral'
-    }
-}
-
-// Get initials from resource name for placeholder
 const getInitials = (name: string): string => {
     return name
         .split(' ')
@@ -304,7 +258,6 @@ const getInitials = (name: string): string => {
         .toUpperCase()
 }
 
-// Get alternative resources (same categories but different item)
 const alternatives = computed(() => {
     if (!item) return []
 
@@ -335,7 +288,6 @@ const alternatives = computed(() => {
     return Array.from(similarItems.values())
 })
 
-// Get categories for an item (for display in alternative cards)
 const getCategories = (item: ResourceItem) => {
     const locations = getSubcategoriesContainingItem(item.id)
     return locations.map(location => location.subcategory.name)
@@ -539,45 +491,6 @@ const getCategories = (item: ResourceItem) => {
 .resource-tag {
   @apply text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full;
 }
-.features-section {
-  @apply mt-8;
-}
-
-.features-table-container {
-  @apply overflow-x-auto;
-}
-
-.features-table {
-  @apply w-full border-collapse;
-}
-
-.feature-name-header, .feature-value-header {
-  @apply px-4 py-3 text-left bg-gray-50 border-b border-gray-200 font-medium text-gray-700;
-}
-
-.feature-name-header {
-  @apply w-1/2;
-}
-
-.feature-row {
-  @apply border-b border-gray-100 hover:bg-gray-50 transition-colors;
-}
-
-.feature-name {
-  @apply px-4 py-3 font-medium text-gray-800;
-}
-
-.feature-value {
-  @apply px-4 py-3;
-}
-
-.feature-status-container {
-  @apply flex flex-col;
-}
-
-.feature-status {
-  @apply inline-flex items-center px-2 py-1 rounded text-sm font-medium;
-}
 
 .status-positive {
   @apply bg-green-100 text-green-800;
@@ -595,7 +508,4 @@ const getCategories = (item: ResourceItem) => {
   @apply bg-blue-100 text-blue-800;
 }
 
-.feature-comment {
-  @apply text-xs text-gray-600 mt-1;
-}
 </style>
