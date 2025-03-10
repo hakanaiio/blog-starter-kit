@@ -2130,6 +2130,78 @@
       "quizzTags": ["technical-content", "technical", "markdown", "full-export", "basic-export"]
     },
     {
+      "id": "hubpress",
+      "name": "HubPress",
+      "icon": "simple-icons:github",
+      "description": "A simple static site generator for blogs, powered by GitHub Pages and a clean web-based admin interface.",
+      "url": "https://github.com/HubPress/hubpress.io",
+      "pros": [
+        "Simple web-based admin interface",
+        "Hosted on GitHub Pages (free hosting)",
+        "Built-in AsciiDoc support",
+        "No database required",
+        "Minimal configuration"
+      ],
+      "cons": [
+        "Limited customization options",
+        "Requires a GitHub account",
+        "Not actively maintained",
+        "Limited theme selection",
+        "Basic feature set compared to alternatives"
+      ],
+      "pricing": "Free (open source)",
+      "tags": ["static-site-generator", "open-source", "blog", "github-pages", "free"],
+      "quizzTags": ["non-technical", "markdown", "basic-export", "github-integration"]
+    },
+    {
+      "id": "pelican",
+      "name": "Pelican",
+      "icon": "simple-icons:python",
+      "description": "A Python-based static site generator that supports Markdown and reStructuredText, ideal for technical blogs.",
+      "url": "https://getpelican.com",
+      "pros": [
+        "Written in Python",
+        "No database required",
+        "Markdown and reStructuredText support",
+        "Extensible plugin system",
+        "Active community and development"
+      ],
+      "cons": [
+        "Command-line focused workflow",
+        "Requires Python knowledge for customization",
+        "Less beginner-friendly than some alternatives",
+        "Fewer themes than WordPress or Hugo",
+        "Limited built-in features compared to dynamic CMS"
+      ],
+      "pricing": "Free (open source)",
+      "tags": ["static-site-generator", "open-source", "blog", "python", "markdown", "free"],
+      "quizzTags": ["technical-content", "technical", "markdown", "full-export", "customizable"]
+    },
+    {
+      "id": "gridea",
+      "name": "Gridea",
+      "icon": "simple-icons:electron",
+      "description": "A modern static blog writing client with a simple interface, built with Electron and Vue.js.",
+      "url": "https://gridea.dev",
+      "pros": [
+        "User-friendly desktop GUI interface",
+        "Real-time preview",
+        "Custom theme support",
+        "Multi-platform (Windows, Mac, Linux)",
+        "GitHub Pages and Coding Pages integration"
+      ],
+      "cons": [
+        "Fewer plugins than established generators",
+        "Limited advanced customization options",
+        "Smaller community than Hugo or Jekyll",
+        "Some features still in development",
+        "Desktop app required (no web interface)"
+      ],
+      "pricing": "Free (open source)",
+      "tags": ["static-site-generator", "open-source", "blog", "desktop-app", "gui", "free"],
+      "quizzTags": ["non-technical", "wysiwyg", "basic-export", "github-integration"]
+    },
+    {
       "id": "gatsby",
       "name": "Gatsby",
         "icon": "logos:gatsby",
@@ -2228,40 +2300,46 @@
       "cta": "Explore CMS options",
       "subcategories": [
         {
-          "id": "open-source",
-          "name": "Open Source CMS",
-          "description": "Free and open source systems to manage your content",
-          "itemRefs": ["wordpress", "joomla", "drupal", "typo3", "concretecms", "grav", "jekyll", "hugo", "gatsby", "eleventy", "bloggrify", "hexo"]
+          "id": "classic-cms",
+          "name": "Classic CMS",
+            "contentSlug": "classic-cms",
+          "description": "Self-hosted content management systems that provide complete website creation and management capabilities while giving you full control over your data and customization options.",
+          "itemRefs": ["ghost", "wordpress", "joomla", "drupal", "typo3", "concretecms", "grav"]
         },
         {
           "id": "static-generators",
           "name": "Static Site Generators",
+          "contentSlug": "static-site-generators",
           "description": "Fast and secure solutions to create high-performance websites",
-          "itemRefs": ["jekyll", "hugo", "gatsby", "eleventy", "bloggrify", "hexo"]
+          "itemRefs": ["jekyll", "hugo", "gatsby", "eleventy", "bloggrify", "hexo", "pelican", "gridea", "hubpress"]
         },
         {
           "id": "headless-cms",
           "name": "Headless CMS Platforms",
+            "contentSlug": "headless-cms",
           "description": "Flexible content management with frontend separation",
-          "itemRefs": ["contentful", "wordpress", "strapi", "sanity", "prismic", "datocms", "directus", "tinacms", "storyblok", "contentstack"]
+          "itemRefs": ["contentful", "wordpress", "strapi", "sanity", "prismic", "datocms", "directus", "tinacms", "storyblok", "contentstack", "keystone"]
         },
         {
           "id": "blogging-platforms",
           "name": "All-in-One Blogging Platforms",
+            "contentSlug": "blogging-platforms",
           "description": "Ready-to-use solutions to launch your blog quickly",
-          "itemRefs": ["ghost", "wordpress", "medium", "substack", "beehiiv", "hashnode", "devto", "blogger", "wix", "squarespace", "bearblog", "writeas", "microblog", "writefreely"]
+          "itemRefs": [ "medium", "substack", "beehiiv", "hashnode", "devto", "blogger", "bearblog", "writeas", "microblog", "writefreely"]
         },
         {
           "id": "no-code",
           "name": "No-Code/Low-Code Solutions",
+          "contentSlug": "no-code",
           "description": "Create your blog with little to no coding required",
           "itemRefs": ["wix", "squarespace", "webflow", "notion", "carrd", "bubble", "framer", "strikingly"]
         },
         {
           "id": "developer-cms",
           "name": "Developer-Focused Solutions",
+          "contentSlug": "developer-cms",
           "description": "Powerful CMS requiring technical skills",
-          "itemRefs": ["next", "nuxt", "sveltekit", "astro", "remix", "strapi", "directus", "keystone", "wagtail"]
+          "itemRefs": ["next", "nuxt", "sveltekit", "astro", "remix", "wagtail"]
         }
       ]
     },

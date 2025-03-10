@@ -151,8 +151,16 @@
         </div>
 
         <!-- Description de sous-catégorie si pertinent -->
-        <div v-if="subcategory" class="subcategory-description">
+        <div v-if="subcategory?.description && !subcategory?.contentSlug" class="subcategory-description">
             {{ subcategory.description }}
+        </div>
+        <div
+            v-if="subcategory?.contentSlug"
+            class="subcategory-description prose prose-h2:text-slate-700
+                max-w-none prose-a:!text-slate-700 prose-a:!no-underline prose-p:text-slate-700
+                prose-li:text-slate-700 prose-headings:text-slate-900"
+        >
+            <ContentDoc :path="`/resources/${subcategory.contentSlug}`" />
         </div>
 
 
@@ -187,6 +195,7 @@
 <script setup lang="ts">
 import {DocumentDuplicateIcon, ServerIcon, UserGroupIcon, WrenchScrewdriverIcon} from '@heroicons/vue/24/outline'
 import ResourceCard from '~/components/resources/ResourceCard.vue'
+import {ContentDoc} from '#components'
 
 const { getAllCategories } = useResources()
 interface Props {
@@ -208,7 +217,7 @@ interface Props {
     relatedSubcategories?: Subcategory[];
 }
 
-const props = withDefaults(defineProps<Props>(), {
+withDefaults(defineProps<Props>(), {
     showBreadcrumb: true,
     pageTitle: undefined,
     pageDescription: undefined,

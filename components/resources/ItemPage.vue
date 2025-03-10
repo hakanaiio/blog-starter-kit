@@ -68,9 +68,7 @@
             </div>
         </div>
 
-        <!-- Contenu de l'onglet Détails -->
         <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-            <!-- Description détaillée -->
             <div class="content-section">
                 <div
                     v-if="longDescription"
@@ -82,7 +80,6 @@
                 </div>
             </div>
 
-            <!-- Caractéristiques principales -->
             <div class="content-section">
                 <h2 class="section-title">
                     Summary
@@ -231,17 +228,15 @@
 import {ContentDoc} from '#components'
 import {Icon} from '@iconify/vue'
 import FeatureTable from '~/components/resources/FeatureTable.vue'
-import {useFeatures} from '#imports'
 
 const route = useRoute()
 const itemId = route.params.itemId as string
 
-const { getItemById, getSubcategoriesContainingItem, getAllItems } = useResources()
-const { getDomainFromTags } = useFeatures()
+const { getItemById, getSubcategoriesContainingItem } = useResources()
 const item = getItemById(itemId)
 
 const longDescription = computed(() => {
-    return item && item.contentSlug
+    return item?.contentSlug
 })
 
 const resourceLocations = computed(() => {
@@ -261,16 +256,8 @@ const getInitials = (name: string): string => {
 const alternatives = computed(() => {
     if (!item) return []
 
-    // Get all items
-    const allItems = getAllItems()
-
-    // Filter out the current item
-    const otherItems = allItems.filter(otherItem => otherItem.id !== item.id)
-
-    // Get all subcategories containing this item
     const locations = resourceLocations.value
 
-    // Find items in the same subcategories
     const similarItems = new Map<string, ResourceItem>()
 
     locations.forEach(location => {
@@ -284,7 +271,6 @@ const alternatives = computed(() => {
         })
     })
 
-    // Convert Map to array
     return Array.from(similarItems.values())
 })
 
