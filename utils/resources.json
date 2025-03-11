@@ -649,10 +649,9 @@
         "cons": [
           "Expensive for individual bloggers",
           "Steep learning curve",
-          "Can be overwhelming with data",
-          "No free plan (only trial)"
+          "Can be overwhelming with data"
         ],
-        "pricing": "Lite plan starts at $99/month",
+        "pricing": "Free tier available - Lite plan starts at $99/month",
         "tags": ["seo", "keyword-research", "competitor-analysis", "backlinks"],
         "quizzTags": ["seo", "marketing", "professional", "premium", "competitor-analysis", "comprehensive"]
       },
