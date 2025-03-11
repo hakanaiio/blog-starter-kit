@@ -929,6 +929,101 @@
         "tags": ["wordpress-hosting", "managed", "premium", "performance"],
         "quizzTags": ["hosting", "wordpress", "performance", "premium", "professional", "managed", "support"]
       },
+    {
+      "id": "github-pages",
+      "name": "GitHub Pages",
+      "description": "Free static site hosting directly from your GitHub repository, perfect for personal blogs and project sites.",
+      "url": "https://pages.github.com",
+      "pros": [
+        "Completely free hosting with no bandwidth limits",
+        "Direct deployment from GitHub repositories",
+        "Custom domain support with HTTPS",
+        "Reliable infrastructure"
+      ],
+      "cons": [
+        "Limited to static content only",
+        "No server-side processing",
+        "Public repositories for free tier (code is visible)",
+        "Limited to 1GB storage and 100GB bandwidth per month"
+      ],
+      "pricing": "Free (premium features available with GitHub Pro)",
+      "serverLocations": ["Global CDN"],
+      "tags": ["static-hosting", "free", "git-based", "github"],
+      "quizzTags": ["free", "static-site", "developer-friendly", "git-integration", "basic"]
+    },
+    {
+      "id": "netlify",
+      "name": "Netlify",
+      "description": "Full-featured deployment platform for static sites and JAMstack projects with continuous deployment and serverless functions.",
+      "url": "https://www.netlify.com",
+      "pros": [
+        "Continuous deployment from Git repositories",
+        "Global CDN with instant cache invalidation",
+        "Serverless functions support",
+        "Form handling and site analytics",
+        "Branch deploys and deploy previews"
+      ],
+      "cons": [
+        "Free tier limitations on bandwidth and build minutes",
+        "Premium features require paid plans",
+        "Advanced functionality requires technical knowledge",
+        "Limited customer support on free tier",
+        "Can become costly for high-traffic sites"
+      ],
+      "pricing": "Free tier, Pro plan starts at $19/month",
+      "serverLocations": ["Global CDN"],
+      "tags": ["static-hosting", "jamstack", "git-based", "serverless", "forms"],
+      "quizzTags": ["free-tier", "static-site", "developer-friendly", "git-integration", "advanced"]
+    },
+    {
+      "id": "vercel",
+      "name": "Vercel",
+      "description": "Developer-focused deployment platform optimized for frontend frameworks, with edge functions and global CDN.",
+      "url": "https://vercel.com",
+      "pros": [
+        "Optimized for Next.js and React applications",
+        "Preview deployments for every push",
+        "Edge functions and serverless capabilities",
+        "Automatic SSL and global CDN",
+        "Built-in analytics and performance monitoring"
+      ],
+      "cons": [
+        "Most advanced features require paid plans",
+        "Primarily focused on specific frameworks",
+        "Steeper learning curve for non-developers",
+        "Can get expensive for commercial projects",
+        "Limited server-side capabilities compared to traditional hosting"
+      ],
+      "pricing": "Free tier, Pro plan starts at $20/month per user",
+      "serverLocations": ["Global Edge Network"],
+      "tags": ["static-hosting", "jamstack", "next-js", "edge-functions", "frontend"],
+      "quizzTags": ["free-tier", "static-site", "developer-focused", "git-integration", "react"]
+    },
+    {
+      "id": "cloudflare-pages",
+      "name": "Cloudflare Pages",
+      "description": "Fast and secure static site hosting integrated with Cloudflare's global network and advanced security features.",
+      "url": "https://pages.cloudflare.com",
+      "pros": [
+        "Unlimited bandwidth on all plans",
+        "Global CDN with 200+ locations",
+        "Free SSL certificates",
+        "Edge functions and serverless capabilities",
+        "Integrated with Cloudflare security features",
+        "Unlimited sites and unlimited team members"
+      ],
+      "cons": [
+        "Newer platform with some features still in development",
+        "Limited build environments compared to competitors",
+        "Less extensive documentation and community resources",
+        "Advanced features may require Cloudflare Workers (paid)",
+        "Build time limitations on free plan"
+      ],
+      "pricing": "Free tier, paid features through Cloudflare Workers",
+      "serverLocations": ["Global CDN (200+ locations)"],
+      "tags": ["static-hosting", "security", "cdn", "global-network", "free"],
+      "quizzTags": ["free-tier", "static-site", "security-focused", "git-integration", "performance"]
+    },
       {
         "id": "kinsta",
         "name": "Kinsta",
@@ -1059,69 +1154,7 @@
       "tags": ["integrated-platform", "publishing", "newsletter", "membership"],
       "quizzTags": ["hosting", "publishing", "newsletter", "membership", "blog", "clean", "professional"]
     },
-    {
-      "id": "webflowhosting",
-      "name": "Webflow Hosting",
-      "description": "Integrated hosting for Webflow-designed websites with focus on performance and reliability.",
-      "url": "https://webflow.com/hosting",
-      "pros": [
-        "Optimized for Webflow sites",
-        "Global CDN included",
-        "Strong security features",
-        "Excellent uptime and performance"
-      ],
-      "cons": [
-        "Only works with Webflow-built sites",
-        "More expensive than basic hosting",
-        "Tied to Webflow's ecosystem",
-        "Limited advanced hosting configurations"
-      ],
-      "pricing": "Basic site plan at $12/month, CMS site plan at $16/month, Business site plan at $36/month",
-      "serverLocations": ["Amazon Web Services and Fastly global networks"],
-      "tags": ["integrated-platform", "designer-friendly", "visual-builder", "performance"]
-    },
-    {
-      "id": "squarespacehosting",
-      "name": "Squarespace Hosting",
-      "description": "All-in-one solution combining website builder, CMS, and hosting with focus on design and ease of use.",
-      "url": "https://www.squarespace.com",
-      "pros": [
-        "Beautiful designer templates",
-        "Fully managed hosting included",
-        "Integrated e-commerce features",
-        "No technical knowledge needed"
-      ],
-      "cons": [
-        "Limited customization options",
-        "Fewer third-party integrations",
-        "Less flexibility than open platforms",
-        "Can be expensive for basic blogs"
-      ],
-      "pricing": "Personal at $16/month, Business at $23/month, Commerce Basic at $27/month",
-      "serverLocations": ["United States with global CDN"],
-      "tags": ["integrated-platform", "designer-friendly", "all-in-one", "e-commerce"]
-    },
-    {
-      "id": "wixhosting",
-      "name": "Wix Hosting",
-      "description": "Website builder platform with integrated hosting allowing drag-and-drop design with no technical skills required.",
-      "url": "https://www.wix.com",
-      "pros": [
-        "Intuitive drag-and-drop editor",
-        "Hundreds of templates",
-        "Beginner-friendly",
-        "App marketplace for extended functionality"
-      ],
-      "cons": [
-        "Limited blog management for complex sites",
-        "Difficult to migrate away from Wix",
-        "SEO limitations compared to WordPress",
-        "Free plan displays Wix branding"
-      ],
-      "pricing": "Free plan available, Combo at $16/month, Unlimited at $22/month, Business at $27/month",
-      "serverLocations": ["Global network through Google Cloud and Amazon Web Services"],
-      "tags": ["integrated-platform", "website-builder", "beginner-friendly", "drag-and-drop"]
-    },
+
     {
       "id": "hetzner",
       "name": "Hetzner",
@@ -1144,6 +1177,53 @@
       "serverLocations": ["Europe", "Germany", "Finland", "United States (Virginia)"],
       "tags": ["vps", "cloud", "europe", "performance", "budget-friendly"],
       "quizzTags": ["hosting", "vps", "cloud", "performance", "affordable", "advanced", "technical"]
+    },
+    {
+      "id": "ovh",
+      "name": "OVH",
+      "description": "Cloud provider offering a wide range of hosting solutions, from shared hosting to dedicated servers, with a strong European presence.",
+      "url": "https://www.ovhcloud.com",
+      "pros": [
+        "European data centers with GDPR compliance",
+        "Competitive pricing across all hosting types",
+        "Wide range of solutions (shared, VPS, dedicated)",
+        "Good performance for price ratio",
+        "Extensive documentation and technical resources"
+      ],
+      "cons": [
+        "Customer support can be slow to respond",
+        "Interface can be complex for beginners",
+        "Some services have limited English documentation",
+        "Performance can vary between different products",
+        "Setup process less streamlined than some competitors"
+      ],
+      "pricing": "Shared hosting from €3.99/month, VPS from €3.99/month",
+      "serverLocations": ["France", "Germany", "Poland", "United Kingdom", "Canada", "United States", "Australia", "Singapore"],
+      "tags": ["vps-hosting", "european", "budget-friendly", "scalable", "gdpr-compliant"],
+      "quizzTags": ["europe-based", "multiple-solutions", "technical", "budget", "scalable"]
+    },
+    {
+      "id": "o2switch",
+      "name": "O2Switch",
+      "description": "Shared hosting provider known for excellent performance and unlimited resources at a flat rate, popular for WordPress blogs.",
+      "url": "https://www.o2switch.fr",
+      "pros": [
+        "Unlimited storage, bandwidth, and databases",
+        "Excellent performance for shared hosting",
+        "Free domain name for one year",
+        "One simple plan with all features included"
+      ],
+      "cons": [
+        "Only one plan available (no scaling options)",
+        "Limited to shared hosting only (no VPS options)",
+        "Primarily French-language support",
+        "Server locations only in France",
+        "Not as well-known outside of French-speaking regions"
+      ],
+      "pricing": "Flat rate of €5/month (VAT excluded)",
+      "serverLocations": ["France"],
+      "tags": ["shared-hosting", "wordpress-friendly", "unlimited-resources", "european", "budget-friendly"],
+      "quizzTags": ["simple-pricing", "unlimited", "wordpress", "beginner-friendly"]
     },
     {
       "id": "hostinger",
@@ -2325,7 +2405,7 @@
           "name": "All-in-One Blogging Platforms",
             "contentSlug": "blogging-platforms",
           "description": "Ready-to-use solutions to launch your blog quickly",
-          "itemRefs": [ "medium", "substack", "beehiiv", "hashnode", "devto", "blogger", "bearblog", "writeas", "microblog", "writefreely"]
+          "itemRefs": [ "medium", "substack", "beehiiv", "hashnode", "wordpresscom", "ghostpro", "devto", "blogger", "bearblog", "writeas", "microblog", "writefreely"]
         },
         {
           "id": "no-code",
@@ -2354,7 +2434,7 @@
           "id": "vps-cloud",
           "name": "VPS & Cloud Hosting",
           "description": "Flexible and scalable virtual servers for blogs with moderate to high traffic",
-          "itemRefs": ["hetzner", "hostinger", "linode"]
+          "itemRefs": ["hetzner", "hostinger", "linode", "ovh", "o2switch", "scaleway"]
         },
         {
           "id": "wordpress-specialized",
@@ -2363,10 +2443,10 @@
           "itemRefs": ["wpengine", "kinsta", "flywheel", "cloudways", "siteground"]
         },
         {
-          "id": "integrated-platforms",
-          "name": "Integrated Platforms",
-          "description": "All-in-one solutions combining hosting and content management for hassle-free blogging",
-          "itemRefs": ["wordpresscom", "ghostpro", "webflowhosting", "squarespacehosting", "wixhosting"]
+          "id": "static-deployment",
+          "name": "Static Site Hosting & Deployment",
+          "description": "Fast, secure, and sometimes free hosting platforms optimized for static websites and JAMstack applications",
+          "itemRefs": ["github-pages", "netlify", "vercel", "cloudflare-pages", "render", "surge"]
         }
       ]
     },
