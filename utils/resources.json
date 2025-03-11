@@ -1589,7 +1589,7 @@
           "name": "SvelteKit",
           "icon": "material-icon-theme:svelte",
           "description": "A framework for building web applications of all sizes using Svelte, with server-side rendering.",
-          "url": "https://kit.svelte.dev",
+          "url": "https://svelte.dev",
           "pros": [
             "Highly performant with small bundle sizes",
             "Elegant component syntax",
