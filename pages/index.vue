@@ -28,7 +28,6 @@ import ResourceHero from '~/components/resources/ResourceHero.vue'
 import ResourceCategories from '~/components/resources/ResourceCategories.vue'
 import ResourceAllCategoriesAndSubCategories from '~/components/resources/ResourceAllCategoriesAndSubCategories.vue'
 import ResourceIcons from '~/components/resources/ResourceIcons.vue'
-import ResourceQuizzCTA from '~/components/resources/ResourceQuizzCTA.vue'
 
 
 const config = useRuntimeConfig()

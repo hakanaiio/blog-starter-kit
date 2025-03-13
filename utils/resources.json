@@ -92,7 +92,7 @@
           {"key": "Conversion/goal tracking", "value": "Yes", "comment": "Advanced goal and funnel tracking"},
           {"key": "Heatmaps/Click maps", "value": "Yes", "comment": "Via Heatmap & Session Recording plugin"},
 
-          {"key": "Active reading time", "value": "No"},
+          {"key": "Active Reading time", "value": "No"},
           {"key": "Session duration", "value": "Yes"},
           {"key": "Bounce rate", "value": "Yes"},
           {"key": "Traffic sources", "value": "Yes", "comment": "Detailed referrer and campaign tracking"},
@@ -344,7 +344,7 @@
           {"key": "Conversion/goal tracking", "value": "No"},
           {"key": "Heatmaps/Click maps", "value": "No"},
 
-          {"key": "Active reading time", "value": "Yes"},
+          {"key": "Active Reading time", "value": "Yes"},
           {"key": "Session duration", "value": "Yes"},
           {"key": "Bounce rate", "value": "No"},
           {"key": "Traffic sources", "value": "Yes"},
@@ -1523,7 +1523,7 @@
           "name": "TinaCMS",
           "icon": "simple-icons:tina",
           "description": "A Git-based CMS for static sites.",
-          "url": "https://tina.io",
+          "url": "https://tina.io/en/home",
           "pros": [
             "Git-based workflow",
             "Visual editing in context",

@@ -23,7 +23,14 @@ export default defineNuxtConfig({
   },
 
 
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/image', '@nuxtjs/robots', '@nuxtjs/sitemap', '@nuxt/content', 'nuxt-security'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@nuxt/image',
+    '@nuxtjs/robots',
+    '@nuxtjs/sitemap',
+    '@nuxt/content',
+    'nuxt-security',
+  ],
 
   security: {
     rateLimiter: false,
