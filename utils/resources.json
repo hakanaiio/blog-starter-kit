@@ -2184,7 +2184,124 @@
       ],
       "pricing": "Free (open source)",
       "tags": ["static-site-generator", "open-source", "blog", "ruby", "free"],
-      "quizzTags": ["technical-content", "technical", "markdown", "full-export", "basic-export" ]
+      "quizzTags": ["technical-content", "technical", "markdown", "full-export", "basic-export" ],
+      "features": [
+        {
+          "key": "SEO",
+          "value": "Partial",
+          "comment": "Basic features built-in, but requires 'jekyll-seo-tag' plugin for full functionality"
+        },
+        {
+          "key": "Sitemap",
+          "value": "Via plugin",
+          "comment": "Requires 'jekyll-sitemap' plugin"
+        },
+        {
+          "key": "RSS Feed",
+          "value": "Via plugin",
+          "comment": "Requires 'jekyll-feed' plugin"
+        },
+        {
+          "key": "Social media integration",
+          "value": "Partial",
+          "comment": "Basic support via Liquid templates, but requires customization for advanced integration"
+        },
+        {
+          "key": "PlantUML",
+          "value": "Via plugin",
+          "comment": "Requires 'jekyll-plantuml' or 'jekyll-diagrams' plugin"
+        },
+        {
+          "key": "Mermaid",
+          "value": "Via plugin",
+          "comment": "Requires 'jekyll-mermaid' plugin or custom JavaScript integration"
+        },
+        {
+          "key": "KaTeX (math)",
+          "value": "Via plugin",
+          "comment": "Requires 'jekyll-katex' plugin or custom JavaScript integration"
+        },
+        {
+          "key": "Theming system",
+          "value": "Yes",
+          "comment": "Built-in theming system with many available themes"
+        },
+        {
+          "key": "GitHub Gists integration",
+          "value": "Via plugin",
+          "comment": "Requires 'jekyll-gist' plugin"
+        },
+        {
+          "key": "Analytics",
+          "value": "Via integration",
+          "comment": "Easily integrable via snippets in Liquid templates"
+        },
+        {
+          "key": "Newsletter",
+          "value": "Via integration",
+          "comment": "Requires third-party services integration like Blogtally, Mailchimp, ConvertKit, etc."
+        },
+        {
+          "key": "Search",
+          "value": "Via plugin",
+          "comment": "Options include 'jekyll-algolia', 'simple-jekyll-search', or 'jekyll-lunr-js-search'"
+        },
+        {
+          "key": "Emoji",
+          "value": "Via plugin",
+          "comment": "Requires 'jemoji' plugin"
+        },
+        {
+          "key": "Multilingual",
+          "value": "Limited",
+          "comment": "Basic support via collections or plugins like 'jekyll-polyglot' or 'jekyll-multiple-languages-plugin'"
+        },
+        {
+          "key": "AMP (Accelerated Mobile Pages)",
+          "value": "Via plugin",
+          "comment": "Requires 'jekyll-amp-pwa-plugin' or custom configuration"
+        },
+        {
+          "key": "PWA (Progressive Web App)",
+          "value": "Via plugin",
+          "comment": "Requires 'jekyll-pwa-plugin' or custom configuration"
+        },
+        {
+          "key": "Image optimization",
+          "value": "Via plugin",
+          "comment": "Options include 'jekyll-picture-tag', 'jekyll-responsive-image', or manual integration"
+        },
+        {
+          "key": "Taxonomies",
+          "value": "Partial",
+          "comment": "Native support for categories and tags, but limited for custom taxonomies without plugins"
+        },
+        {
+          "key": "Pagination",
+          "value": "Via plugin",
+          "comment": "Native in older versions, but requires 'jekyll-paginate' or 'jekyll-paginate-v2' for recent versions"
+        },
+        {
+          "key": "Table of contents",
+          "value": "Via plugin",
+          "comment": "Requires 'jekyll-toc' plugin or using kramdown with toc option"
+        },
+        {
+          "key": "Comments",
+          "value": "Via integration",
+          "comment": "Integration with third-party services like Disqus, Utterances, or staticman"
+        },
+        {
+          "key": "Plugin system",
+          "value": "Yes",
+          "comment": "Rich plugin system with many extensions available"
+        },
+        {
+          "key": "Headless CMS integration",
+          "value": "Via integration",
+          "comment": "Compatible with Forestry, Netlify CMS, CloudCannon, Contentful via custom configuration"
+        }
+      ]
     },
     {
       "id": "hugo",
@@ -2206,7 +2323,124 @@
       ],
       "pricing": "Free (open source)",
       "tags": ["static-site-generator", "open-source", "blog", "go","free"],
-      "quizzTags": ["technical-content", "technical", "markdown", "full-export", "basic-export"]
+      "quizzTags": ["technical-content", "technical", "markdown", "full-export", "basic-export"],
+      "features": [
+        {
+          "key": "SEO",
+          "value": "Yes",
+          "comment": "Built-in SEO features including meta tags, canonical URLs, Open Graph, and JSON-LD"
+        },
+        {
+          "key": "Sitemap",
+          "value": "Yes",
+          "comment": "Built-in sitemap generation without plugins"
+        },
+        {
+          "key": "RSS Feed",
+          "value": "Yes",
+          "comment": "Built-in RSS/Atom feed generation without plugins"
+        },
+        {
+          "key": "Social media integration",
+          "value": "Yes",
+          "comment": "Built-in support for social cards, sharing, and integration via templates"
+        },
+        {
+          "key": "PlantUML",
+          "value": "Via shortcode",
+          "comment": "Customizable shortcodes can be created for PlantUML integration"
+        },
+        {
+          "key": "Mermaid",
+          "value": "Via shortcode",
+          "comment": "Official shortcode available for Mermaid diagrams"
+        },
+        {
+          "key": "KaTeX (math)",
+          "value": "Via integration",
+          "comment": "Support through either KaTeX or MathJax via templates or theme integration"
+        },
+        {
+          "key": "Theming system",
+          "value": "Yes",
+          "comment": "Powerful theming system with theme inheritance and module capabilities"
+        },
+        {
+          "key": "GitHub Gists integration",
+          "value": "Via shortcode",
+          "comment": "Can be implemented via custom shortcodes"
+        },
+        {
+          "key": "Analytics",
+          "value": "Via integration",
+          "comment": "Easy integration with most analytics platforms via themes or templates"
+        },
+        {
+          "key": "Newsletter",
+          "value": "Via integration",
+          "comment": "Third-party services can be integrated via templates or partials"
+        },
+        {
+          "key": "Search",
+          "value": "Via integration",
+          "comment": "Options include built-in JSON index, Algolia, Lunr.js, or other client-side search solutions"
+        },
+        {
+          "key": "Emoji",
+          "value": "Yes",
+          "comment": "Native emoji support with several rendering options"
+        },
+        {
+          "key": "Multilingual",
+          "value": "Yes",
+          "comment": "First-class support for multilingual sites with i18n capabilities"
+        },
+        {
+          "key": "AMP (Accelerated Mobile Pages)",
+          "value": "Via templates",
+          "comment": "Can be implemented using custom output formats and templates"
+        },
+        {
+          "key": "PWA (Progressive Web App)",
+          "value": "Via integration",
+          "comment": "Requires custom configuration or theme with PWA support"
+        },
+        {
+          "key": "Image optimization",
+          "value": "Yes",
+          "comment": "Built-in image processing with resize, crop, filter capabilities and image optimization"
+        },
+        {
+          "key": "Taxonomies",
+          "value": "Yes",
+          "comment": "Powerful built-in taxonomy system with support for custom taxonomies"
+        },
+        {
+          "key": "Pagination",
+          "value": "Yes",
+          "comment": "Built-in pagination for list pages with customizable options"
+        },
+        {
+          "key": "Table of contents",
+          "value": "Yes",
+          "comment": "Built-in table of contents generation for markdown content"
+        },
+        {
+          "key": "Comments",
+          "value": "Via integration",
+          "comment": "Integration with Disqus, Commento, Utterances or other comment systems via templates"
+        },
+        {
+          "key": "Plugin system",
+          "value": "Partial",
+          "comment": "Uses 'modules' rather than plugins, with a different architectural approach than traditional plugins"
+        },
+        {
+          "key": "Headless CMS integration",
+          "value": "Yes",
+          "comment": "Excellent support for most headless CMS platforms including Contentful, Forestry, NetlifyCMS, Strapi"
+        }
+      ]
     },
     {
       "id": "hubpress",
@@ -2230,7 +2464,124 @@
       ],
       "pricing": "Free (open source)",
       "tags": ["static-site-generator", "open-source", "blog", "github-pages", "free"],
-      "quizzTags": ["non-technical", "markdown", "basic-export", "github-integration"]
+      "quizzTags": ["non-technical", "markdown", "basic-export", "github-integration"],
+      "features": [
+        {
+          "key": "SEO",
+          "value": "Limited",
+          "comment": "Basic SEO features through theme templates"
+        },
+        {
+          "key": "Sitemap",
+          "value": "Yes",
+          "comment": "Automatic sitemap generation"
+        },
+        {
+          "key": "RSS Feed",
+          "value": "Yes",
+          "comment": "Built-in RSS feed generation"
+        },
+        {
+          "key": "Social media integration",
+          "value": "Partial",
+          "comment": "Basic social sharing options included in themes"
+        },
+        {
+          "key": "PlantUML",
+          "value": "No",
+          "comment": "Not supported natively"
+        },
+        {
+          "key": "Mermaid",
+          "value": "No",
+          "comment": "Not supported natively"
+        },
+        {
+          "key": "KaTeX (math)",
+          "value": "Via AsciiDoc",
+          "comment": "Limited math support through AsciiDoc syntax"
+        },
+        {
+          "key": "Theming system",
+          "value": "Limited",
+          "comment": "Small selection of pre-built themes with limited customization"
+        },
+        {
+          "key": "GitHub Gists integration",
+          "value": "Via AsciiDoc",
+          "comment": "Can be embedded using AsciiDoc syntax"
+        },
+        {
+          "key": "Analytics",
+          "value": "Yes",
+          "comment": "Google Analytics integration included"
+        },
+        {
+          "key": "Newsletter",
+          "value": "No",
+          "comment": "No built-in newsletter support"
+        },
+        {
+          "key": "Search",
+          "value": "No",
+          "comment": "No built-in search functionality"
+        },
+        {
+          "key": "Emoji",
+          "value": "Via AsciiDoc",
+          "comment": "Limited support through AsciiDoc syntax"
+        },
+        {
+          "key": "Multilingual",
+          "value": "No",
+          "comment": "No multilingual support"
+        },
+        {
+          "key": "AMP (Accelerated Mobile Pages)",
+          "value": "No",
+          "comment": "No AMP support"
+        },
+        {
+          "key": "PWA (Progressive Web App)",
+          "value": "No",
+          "comment": "No PWA support"
+        },
+        {
+          "key": "Image optimization",
+          "value": "No",
+          "comment": "No built-in image optimization"
+        },
+        {
+          "key": "Taxonomies",
+          "value": "Limited",
+          "comment": "Basic tagging system only"
+        },
+        {
+          "key": "Pagination",
+          "value": "Yes",
+          "comment": "Basic pagination for post listings"
+        },
+        {
+          "key": "Table of contents",
+          "value": "Via AsciiDoc",
+          "comment": "Can be generated through AsciiDoc syntax"
+        },
+        {
+          "key": "Comments",
+          "value": "Yes",
+          "comment": "Disqus integration included"
+        },
+        {
+          "key": "Plugin system",
+          "value": "No",
+          "comment": "No extensible plugin system"
+        },
+        {
+          "key": "Headless CMS integration",
+          "value": "No",
+          "comment": "Works directly with GitHub as content storage"
+        }
+      ]
     },
     {
       "id": "pelican",
@@ -2254,7 +2605,124 @@
       ],
       "pricing": "Free (open source)",
       "tags": ["static-site-generator", "open-source", "blog", "python", "markdown", "free"],
-      "quizzTags": ["technical-content", "technical", "markdown", "full-export", "customizable"]
+      "quizzTags": ["technical-content", "technical", "markdown", "full-export", "customizable"],
+      "features": [
+        {
+          "key": "SEO",
+          "value": "Partial",
+          "comment": "Basic SEO through templates, but requires additional configuration for advanced features"
+        },
+        {
+          "key": "Sitemap",
+          "value": "Via plugin",
+          "comment": "Available through pelican-sitemap plugin"
+        },
+        {
+          "key": "RSS Feed",
+          "value": "Yes",
+          "comment": "Built-in Atom and RSS feed generation"
+        },
+        {
+          "key": "Social media integration",
+          "value": "Via plugin",
+          "comment": "Requires plugins like pelican-social-share or custom theme integration"
+        },
+        {
+          "key": "PlantUML",
+          "value": "Via plugin",
+          "comment": "Can be added via custom plugin or Markdown extension"
+        },
+        {
+          "key": "Mermaid",
+          "value": "Via plugin",
+          "comment": "Through custom plugin or Markdown extension"
+        },
+        {
+          "key": "KaTeX (math)",
+          "value": "Via plugin",
+          "comment": "Math support through pelican-render-math or similar plugins"
+        },
+        {
+          "key": "Theming system",
+          "value": "Yes",
+          "comment": "Support for custom and third-party themes with Jinja2 templating"
+        },
+        {
+          "key": "GitHub Gists integration",
+          "value": "Via plugin",
+          "comment": "Can be integrated through custom plugins or theme modifications"
+        },
+        {
+          "key": "Analytics",
+          "value": "Via integration",
+          "comment": "Can be added through theme templates or dedicated plugins"
+        },
+        {
+          "key": "Newsletter",
+          "value": "Via integration",
+          "comment": "Requires manual integration through theme templates"
+        },
+        {
+          "key": "Search",
+          "value": "Via plugin",
+          "comment": "Options include tipue_search plugin or client-side search integration"
+        },
+        {
+          "key": "Emoji",
+          "value": "Via plugin",
+          "comment": "Requires Markdown extension or custom plugin"
+        },
+        {
+          "key": "Multilingual",
+          "value": "Yes",
+          "comment": "Built-in i18n support with the pelican-i18n_subsites plugin"
+        },
+        {
+          "key": "AMP (Accelerated Mobile Pages)",
+          "value": "Via plugin",
+          "comment": "Would require custom plugin implementation"
+        },
+        {
+          "key": "PWA (Progressive Web App)",
+          "value": "Via integration",
+          "comment": "Requires manual implementation in theme"
+        },
+        {
+          "key": "Image optimization",
+          "value": "Via plugin",
+          "comment": "Available through pelican-image-process or similar plugins"
+        },
+        {
+          "key": "Taxonomies",
+          "value": "Partial",
+          "comment": "Built-in support for categories and tags, custom taxonomies require plugins"
+        },
+        {
+          "key": "Pagination",
+          "value": "Yes",
+          "comment": "Built-in pagination for article listings"
+        },
+        {
+          "key": "Table of contents",
+          "value": "Via plugin",
+          "comment": "Available through plugins or Markdown extensions"
+        },
+        {
+          "key": "Comments",
+          "value": "Via integration",
+          "comment": "Integration with Disqus built-in, other systems require custom theme integration"
+        },
+        {
+          "key": "Plugin system",
+          "value": "Yes",
+          "comment": "Extensive plugin system with Python-based plugins"
+        },
+        {
+          "key": "Headless CMS integration",
+          "value": "Limited",
+          "comment": "Possible but not as seamless as with other generators; requires custom integration"
+        }
+      ]
     },
     {
       "id": "gridea",
@@ -2278,7 +2746,124 @@
       ],
       "pricing": "Free (open source)",
       "tags": ["static-site-generator", "open-source", "blog", "desktop-app", "gui", "free"],
-      "quizzTags": ["non-technical", "wysiwyg", "basic-export", "github-integration"]
+      "quizzTags": ["non-technical", "wysiwyg", "basic-export", "github-integration"],
+      "features": [
+        {
+          "key": "SEO",
+          "value": "Yes",
+          "comment": "Built-in SEO settings with customizable meta tags and descriptions"
+        },
+        {
+          "key": "Sitemap",
+          "value": "Yes",
+          "comment": "Automatic sitemap generation"
+        },
+        {
+          "key": "RSS Feed",
+          "value": "Yes",
+          "comment": "Built-in RSS feed generation"
+        },
+        {
+          "key": "Social media integration",
+          "value": "Partial",
+          "comment": "Basic social media links and sharing buttons built into themes"
+        },
+        {
+          "key": "PlantUML",
+          "value": "No",
+          "comment": "Not natively supported"
+        },
+        {
+          "key": "Mermaid",
+          "value": "Via integration",
+          "comment": "Possible through custom code insertion, but not natively supported"
+        },
+        {
+          "key": "KaTeX (math)",
+          "value": "Via integration",
+          "comment": "Can be integrated through theme customization"
+        },
+        {
+          "key": "Theming system",
+          "value": "Yes",
+          "comment": "Built-in theme system with customizable options and several included themes"
+        },
+        {
+          "key": "GitHub Gists integration",
+          "value": "Via integration",
+          "comment": "Possible through custom code blocks, but not a built-in feature"
+        },
+        {
+          "key": "Analytics",
+          "value": "Yes",
+          "comment": "Built-in Google Analytics integration"
+        },
+        {
+          "key": "Newsletter",
+          "value": "Via integration",
+          "comment": "Requires manual integration through theme customization"
+        },
+        {
+          "key": "Search",
+          "value": "Limited",
+          "comment": "Basic search functionality dependent on theme"
+        },
+        {
+          "key": "Emoji",
+          "value": "Via Markdown",
+          "comment": "Supported through standard Markdown emoji syntax"
+        },
+        {
+          "key": "Multilingual",
+          "value": "Limited",
+          "comment": "Interface can be changed, but content multilingual support is limited"
+        },
+        {
+          "key": "AMP (Accelerated Mobile Pages)",
+          "value": "No",
+          "comment": "Not supported natively"
+        },
+        {
+          "key": "PWA (Progressive Web App)",
+          "value": "No",
+          "comment": "Not supported natively"
+        },
+        {
+          "key": "Image optimization",
+          "value": "Limited",
+          "comment": "Basic image handling but no advanced optimization features"
+        },
+        {
+          "key": "Taxonomies",
+          "value": "Limited",
+          "comment": "Support for basic categories and tags only"
+        },
+        {
+          "key": "Pagination",
+          "value": "Yes",
+          "comment": "Built-in pagination for post listings"
+        },
+        {
+          "key": "Table of contents",
+          "value": "Partial",
+          "comment": "Depends on theme support"
+        },
+        {
+          "key": "Comments",
+          "value": "Yes",
+          "comment": "Built-in support for Disqus and Gitalk comment systems"
+        },
+        {
+          "key": "Plugin system",
+          "value": "No",
+          "comment": "No extensible plugin architecture"
+        },
+        {
+          "key": "Headless CMS integration",
+          "value": "No",
+          "comment": "Not designed for headless CMS integration"
+        }
+      ]
     },
     {
       "id": "gatsby",
@@ -2300,7 +2885,125 @@
       ],
       "pricing": "Free (open source), paid Gatsby Cloud services",
       "tags": ["static-site-generator", "open-source", "blog", "react", "javascript","free"],
-      "quizzTags": ["technical-content", "technical", "markdown", "full-export", "basic-export"]
+      "quizzTags": ["technical-content", "technical", "markdown", "full-export", "basic-export"],
+      "features": [
+        {
+          "key": "SEO",
+          "value": "Yes",
+          "comment": "Strong SEO support through gatsby-plugin-react-helmet and other official plugins"
+        },
+        {
+          "key": "Sitemap",
+          "value": "Via plugin",
+          "comment": "Available through gatsby-plugin-sitemap"
+        },
+        {
+          "key": "RSS Feed",
+          "value": "Via plugin",
+          "comment": "Available through gatsby-plugin-feed"
+        },
+        {
+          "key": "Social media integration",
+          "value": "Via plugin",
+          "comment": "Social sharing, cards, and integrations available through various plugins"
+        },
+        {
+          "key": "PlantUML",
+          "value": "Via plugin",
+          "comment": "Can be integrated through custom components or markdown remark plugins"
+        },
+        {
+          "key": "Mermaid",
+          "value": "Via plugin",
+          "comment": "Can be used with gatsby-remark-mermaid plugin"
+        },
+        {
+          "key": "KaTeX (math)",
+          "value": "Via plugin",
+          "comment": "Supported through gatsby-remark-katex or other math rendering plugins"
+        },
+        {
+          "key": "Theming system",
+          "value": "Yes",
+          "comment": "Supports themes through gatsby-theme architecture with component shadowing"
+        },
+        {
+          "key": "GitHub Gists integration",
+          "value": "Via plugin",
+          "comment": "Can be implemented with gatsby-remark-embed-gist"
+        },
+        {
+          "key": "Analytics",
+          "value": "Via plugin",
+          "comment": "Easy integration with Google Analytics, Plausible, Fathom through official plugins"
+        },
+        {
+          "key": "Newsletter",
+          "value": "Via integration",
+          "comment": "Can be integrated through React components for services like Mailchimp, ConvertKit"
+        },
+        {
+          "key": "Search",
+          "value": "Via plugin",
+          "comment": "Options include Algolia (gatsby-plugin-algolia), Lunr.js, Elasticsearch integrations"
+        },
+        {
+          "key": "Emoji",
+          "value": "Via plugin",
+          "comment": "Supported through gatsby-remark-emoji or other emoji plugins"
+        },
+        {
+          "key": "Multilingual",
+          "value": "Via plugin",
+          "comment": "i18n support through plugins like gatsby-plugin-intl or gatsby-plugin-i18n"
+        },
+        {
+          "key": "AMP (Accelerated Mobile Pages)",
+          "value": "Via plugin",
+          "comment": "Available through gatsby-plugin-amp or custom implementation"
+        },
+        {
+          "key": "PWA (Progressive Web App)",
+          "value": "Yes",
+          "comment": "First-class PWA support through gatsby-plugin-manifest and gatsby-plugin-offline"
+        },
+        {
+          "key": "Image optimization",
+          "value": "Yes",
+          "comment": "Advanced image optimization with gatsby-plugin-sharp, gatsby-image, and built-in responsive images"
+        },
+        {
+          "key": "Taxonomies",
+          "value": "Via GraphQL",
+          "comment": "Custom taxonomies can be implemented through GraphQL queries and data structures"
+        },
+        {
+          "key": "Pagination",
+          "value": "Via API",
+          "comment": "Pagination available through createPage API and GraphQL queries"
+        },
+        {
+          "key": "Table of contents",
+          "value": "Via plugin",
+          "comment": "Supported through gatsby-remark-table-of-contents or similar plugins"
+        },
+        {
+          "key": "Comments",
+          "value": "Via integration",
+          "comment": "Integration with Disqus, Commento, Utterances via React components"
+        },
+        {
+          "key": "Plugin system",
+          "value": "Yes",
+          "comment": "Extensive plugin ecosystem with thousands of plugins available"
+        },
+        {
+          "key": "Headless CMS integration",
+          "value": "Yes",
+          "comment": "First-class support for most headless CMS platforms with official plugins for Contentful, WordPress, Sanity, Strapi, etc."
+        }
+
+      ]
     },
     {
       "id": "eleventy",
@@ -2322,7 +3025,124 @@
       ],
       "pricing": "Free (open source)",
       "tags": ["static-site-generator", "open-source", "blog", "javascript"],
-      "quizzTags": ["technical-content", "technical", "markdown", "full-export", "basic-export"]
+      "quizzTags": ["technical-content", "technical", "markdown", "full-export", "basic-export"],
+      "features": [
+        {
+          "key": "SEO",
+          "value": "Via integration",
+          "comment": "Requires custom implementation or adding meta tags in templates"
+        },
+        {
+          "key": "Sitemap",
+          "value": "Via plugin",
+          "comment": "Can be added with plugins like eleventy-plugin-sitemap"
+        },
+        {
+          "key": "RSS Feed",
+          "value": "Via plugin",
+          "comment": "Available through plugins like eleventy-plugin-rss"
+        },
+        {
+          "key": "Social media integration",
+          "value": "Via integration",
+          "comment": "Requires custom implementation in templates"
+        },
+        {
+          "key": "PlantUML",
+          "value": "Via plugin",
+          "comment": "Can be implemented through markdown-it plugins or custom shortcodes"
+        },
+        {
+          "key": "Mermaid",
+          "value": "Via plugin",
+          "comment": "Can be implemented through custom shortcodes or markdown-it plugins"
+        },
+        {
+          "key": "KaTeX (math)",
+          "value": "Via plugin",
+          "comment": "Can be implemented using eleventy-plugin-katex or similar solutions"
+        },
+        {
+          "key": "Theming system",
+          "value": "Partial",
+          "comment": "No formal theming system, but flexible templating allows for theme-like structures"
+        },
+        {
+          "key": "GitHub Gists integration",
+          "value": "Via integration",
+          "comment": "Can be implemented through custom shortcodes"
+        },
+        {
+          "key": "Analytics",
+          "value": "Via integration",
+          "comment": "Easy to add through template includes"
+        },
+        {
+          "key": "Newsletter",
+          "value": "Via integration",
+          "comment": "Can be added through template includes"
+        },
+        {
+          "key": "Search",
+          "value": "Via integration",
+          "comment": "Options include Algolia, Lunr.js, or custom client-side implementation"
+        },
+        {
+          "key": "Emoji",
+          "value": "Via plugin",
+          "comment": "Can be implemented through markdown-it plugins"
+        },
+        {
+          "key": "Multilingual",
+          "value": "Via integration",
+          "comment": "Possible through directory structure and custom collections"
+        },
+        {
+          "key": "AMP (Accelerated Mobile Pages)",
+          "value": "Via integration",
+          "comment": "Can be implemented through custom output formats"
+        },
+        {
+          "key": "PWA (Progressive Web App)",
+          "value": "Via integration",
+          "comment": "Can be implemented through custom service worker and manifest files"
+        },
+        {
+          "key": "Image optimization",
+          "value": "Via plugin",
+          "comment": "Available through eleventy-img or similar plugins"
+        },
+        {
+          "key": "Taxonomies",
+          "value": "Via integration",
+          "comment": "Can be implemented through custom collections and tags"
+        },
+        {
+          "key": "Pagination",
+          "value": "Yes",
+          "comment": "Built-in pagination API"
+        },
+        {
+          "key": "Table of contents",
+          "value": "Via plugin",
+          "comment": "Can be implemented through markdown-it plugins or custom functions"
+        },
+        {
+          "key": "Comments",
+          "value": "Via integration",
+          "comment": "Can integrate with services like Disqus, Utterances, etc. through template includes"
+        },
+        {
+          "key": "Plugin system",
+          "value": "Yes",
+          "comment": "Extensible through JavaScript plugins and custom shortcodes"
+        },
+        {
+          "key": "Headless CMS integration",
+          "value": "Yes",
+          "comment": "Good support for various headless CMS options through data fetching"
+        }
+      ]
     },
     {
       "id": "bloggrify",
@@ -2345,7 +3165,115 @@
       ],
       "pricing": "Free (open source)",
       "tags": ["static-site-generator", "open-source", "blog", "javascript","free"],
-      "quizzTags": ["technical-content", "technical", "markdown", "full-export", "basic-export"]
+      "quizzTags": ["technical-content", "technical", "markdown", "full-export", "basic-export"],
+      "features": [
+        {
+          "key": "SEO",
+          "value": "Yes",
+          "comment": "Built-in SEO features including Open Graph, Twitter Cards, canonical URLs, etc."
+        },
+        {
+          "key": "Sitemap",
+          "value": "Yes"
+        },
+        {
+          "key": "RSS Feed",
+          "value": "Yes"
+        },
+        {
+          "key": "Social media integration",
+          "value": "Yes",
+          "comment": "Built-in shortcodes for embedding videos and sharing buttons"
+        },
+        {
+          "key": "PlantUML",
+          "value": "Yes"
+        },
+        {
+          "key": "Mermaid",
+          "value": "Yes"
+        },
+        {
+          "key": "KaTeX (math)",
+          "value": "Yes"
+        },
+        {
+          "key": "Theming system",
+          "value": "Yes",
+          "comment": "Built-in theming system, though limited number of themes available"
+        },
+        {
+          "key": "GitHub Gists integration",
+          "value": "Via integration"
+        },
+        {
+          "key": "Analytics",
+          "value": "Yes",
+          "comment": "Built-in integrations with multiple analytics platforms (Fathom, Pirsch, Google Analytics, Blogtally Pulse, Umami, Matomo)"
+        },
+        {
+          "key": "Newsletter",
+          "value": "Yes",
+          "comment": "Built-in integration with Blogtally pulse and mailjet"
+        },
+        {
+          "key": "Search",
+          "value": "Limited",
+          "comment": "Basic built-in search functionality using XML file generated at build time"
+        },
+        {
+          "key": "Emoji",
+          "value": "Yes"
+        },
+        {
+          "key": "Multilingual",
+          "value": "Via integration",
+          "comment": "Possible through integration with existing support for hreflang alternates"
+        },
+        {
+          "key": "AMP (Accelerated Mobile Pages)",
+          "value": "Via integration",
+          "comment": "Possible through custom integration but not built into the framework"
+        },
+        {
+          "key": "PWA (Progressive Web App)",
+          "value": "Via integration",
+          "comment": "Possible through custom integration but not built into the framework"
+        },
+        {
+          "key": "Image optimization",
+          "value": "Yes",
+          "comment": "Built-in image optimization using Nuxt Image"
+        },
+        {
+          "key": "Taxonomies",
+          "value": "Partial",
+          "comment": "Built-in support for tags and categories"
+        },
+        {
+          "key": "Pagination",
+          "value": "Yes"
+        },
+        {
+          "key": "Table of contents",
+          "value": "Yes"
+        },
+        {
+          "key": "Comments",
+          "value": "Yes",
+          "comment": "Built-in integration with Hyvor comment system"
+        },
+        {
+          "key": "Plugin system",
+          "value": "Yes",
+          "comment": "Uses Nuxt modules and layers for extensibility, though ecosystem is limited as many features are built-in"
+        },
+        {
+          "key": "Headless CMS integration",
+          "value": "Via integration",
+          "comment": "No existing integrations, but likely possible through custom implementation"
+        }
+      ]
     },
     {
       "id": "hexo",
@@ -2366,7 +3294,124 @@
         "Some plugins aren't maintained"
       ],
       "pricing": "Free (open source)",
-      "tags": ["static-site-generator", "open-source", "blog", "node.js", "markdown", "full-export", "basic-export","free"]
+      "tags": ["static-site-generator", "open-source", "blog", "node.js", "markdown", "full-export", "basic-export","free"],
+      "features": [
+        {
+          "key": "SEO",
+          "value": "Via plugin",
+          "comment": "Available through hexo-seo plugin or custom configuration"
+        },
+        {
+          "key": "Sitemap",
+          "value": "Via plugin",
+          "comment": "Available through hexo-generator-sitemap"
+        },
+        {
+          "key": "RSS Feed",
+          "value": "Via plugin",
+          "comment": "Available through hexo-generator-feed"
+        },
+        {
+          "key": "Social media integration",
+          "value": "Via theme",
+          "comment": "Most themes include social media integration options"
+        },
+        {
+          "key": "PlantUML",
+          "value": "Via plugin",
+          "comment": "Can be added with hexo-filter-plantuml or similar plugins"
+        },
+        {
+          "key": "Mermaid",
+          "value": "Via plugin",
+          "comment": "Available through hexo-filter-mermaid-diagrams or similar plugins"
+        },
+        {
+          "key": "KaTeX (math)",
+          "value": "Via plugin",
+          "comment": "Available through hexo-renderer-markdown-it-katex or similar plugins"
+        },
+        {
+          "key": "Theming system",
+          "value": "Yes",
+          "comment": "Robust theming system with many available themes"
+        },
+        {
+          "key": "GitHub Gists integration",
+          "value": "Via plugin",
+          "comment": "Can be implemented through custom tags or plugins"
+        },
+        {
+          "key": "Analytics",
+          "value": "Via integration",
+          "comment": "Most themes support analytics integration"
+        },
+        {
+          "key": "Newsletter",
+          "value": "Via integration",
+          "comment": "Can be added through theme customization"
+        },
+        {
+          "key": "Search",
+          "value": "Via plugin",
+          "comment": "Options include hexo-generator-search or Algolia integration"
+        },
+        {
+          "key": "Emoji",
+          "value": "Via plugin",
+          "comment": "Support through hexo-filter-github-emojis or similar plugins"
+        },
+        {
+          "key": "Multilingual",
+          "value": "Yes",
+          "comment": "Built-in i18n support"
+        },
+        {
+          "key": "AMP (Accelerated Mobile Pages)",
+          "value": "Via plugin",
+          "comment": "Can be implemented with hexo-generator-amp"
+        },
+        {
+          "key": "PWA (Progressive Web App)",
+          "value": "Via plugin",
+          "comment": "Available through hexo-pwa or similar solutions"
+        },
+        {
+          "key": "Image optimization",
+          "value": "Via plugin",
+          "comment": "Available through hexo-filter-responsive-images or similar plugins"
+        },
+        {
+          "key": "Taxonomies",
+          "value": "Partial",
+          "comment": "Built-in support for categories and tags; custom taxonomies require additional configuration"
+        },
+        {
+          "key": "Pagination",
+          "value": "Yes",
+          "comment": "Built-in pagination for post listings"
+        },
+        {
+          "key": "Table of contents",
+          "value": "Yes",
+          "comment": "Built-in table of contents generation"
+        },
+        {
+          "key": "Comments",
+          "value": "Yes",
+          "comment": "Built-in support for Disqus; other systems supported via themes"
+        },
+        {
+          "key": "Plugin system",
+          "value": "Yes",
+          "comment": "Extensive plugin ecosystem with many available plugins"
+        },
+        {
+          "key": "Headless CMS integration",
+          "value": "Via plugin",
+          "comment": "Integration possible with various headless CMS platforms"
+        }
+      ]
     }
   ],
   "categories": [

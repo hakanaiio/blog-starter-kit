@@ -1,4 +1,65 @@
-{
+{"cms.static-generators": {
+  "name": "Static Site Generators",
+  "categories": [
+    {
+      "id": "basics",
+      "name": "Core Features",
+      "features": [
+        "SEO",
+        "Sitemap",
+        "RSS Feed",
+        "Theming system",
+        "Plugin system"
+      ]
+    },
+    {
+      "id": "content",
+      "name": "Content Management",
+      "features": [
+        "Taxonomies",
+        "Table of contents",
+        "Pagination",
+        "Comments",
+        "Markdown support",
+        "Code syntax highlighting",
+        "Emoji",
+        "Image optimization",
+        "Drafts/Unpublished content"
+      ]
+    },
+    {
+      "id": "integrations",
+      "name": "Integrations",
+      "features": [
+        "Social media integration",
+        "Analytics",
+        "Newsletter",
+        "Headless CMS integration",
+        "Search"
+      ]
+    },
+    {
+      "id": "advanced",
+      "name": "Advanced Features",
+      "features": [
+        "Multilingual",
+        "AMP (Accelerated Mobile Pages)",
+        "PWA (Progressive Web App)"
+      ]
+    },
+    {
+      "id": "specialized",
+      "name": "Specialized Content",
+      "features": [
+        "PlantUML",
+        "Mermaid",
+        "KaTeX (math)",
+        "Charts and data visualization",
+        "GitHub Gists integration"
+      ]
+    }
+  ]
+},
   "tools.analytics": {
     "name": "Analytics",
     "categories": [
@@ -41,7 +102,7 @@
       },
       {
         "id": "advanced",
-        "name": "Advanced Features",
+        "name": "Product analytics",
         "features": [
           "Conversion funnels",
           "User segmentation",
