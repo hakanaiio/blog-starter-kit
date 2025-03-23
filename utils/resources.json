@@ -1523,7 +1523,7 @@
           "name": "TinaCMS",
           "icon": "simple-icons:tina",
           "description": "A Git-based CMS for static sites.",
-          "url": "https://tina.io/en/home",
+          "url": "https://tina.io",
           "pros": [
             "Git-based workflow",
             "Visual editing in context",
