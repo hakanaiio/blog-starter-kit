@@ -50,8 +50,8 @@
                                         Beyond blogging, I'm an entrepreneur who founded and scaled a startup to 700 employees across Europe. Throughout my journey, I've maintained my blog to share insights and lessons learned along the way.
                                     </p>
                                     <p class="text-lg text-gray-700 leading-relaxed">
-                                        I'm also the founder of <NuxtLink to="https://blogtally.com" class="link">
-                                            BlogTally
+                                        I'm also the founder of <NuxtLink to="https://hakanai.io" class="link">
+                                            Hakanai
                                         </NuxtLink>, a toolbox specifically designed for bloggers and content creators, and the creator of <NuxtLink class="link" to="https://bloggrify.com">
                                             Bloggrify
                                         </NuxtLink>, an open-source static blog generator.
@@ -135,7 +135,7 @@
                                                             Full Transparency
                                                         </h3>
                                                         <p class="mt-2 text-base text-gray-600">
-                                                            When a tool is mentioned and I have a connection to it (like BlogTally), this is clearly indicated.
+                                                            When a tool is mentioned and I have a connection to it (like Hakanai), this is clearly indicated.
                                                         </p>
                                                     </div>
                                                 </div>
@@ -198,7 +198,7 @@
                                     </button>
                                     <div class="px-6 pb-4">
                                         <p class="text-base text-gray-700">
-                                            I strive to keep this site as objective as possible. BlogTally is presented among other tools, with its strengths and weaknesses clearly detailed.
+                                            I strive to keep this site as objective as possible. Hakanai is presented among other tools, with its strengths and weaknesses clearly detailed.
                                             I encourage you to test different solutions to find the one that best meets your needs.
                                         </p>
                                     </div>

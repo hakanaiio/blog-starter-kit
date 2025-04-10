@@ -9,7 +9,7 @@
                 <div>
                     <div class=" flex flex-col gap-2 ">
                         <NuxtLink to="/" class="text-slate-900 text-2xl font-bold">
-                            BlogTally
+                            Hakanai
                         </NuxtLink>
                         <p class="text-sm text-slate-600">
                             Complete toolset for bloggers, including analytics, newsletters, and more.
@@ -24,10 +24,10 @@
                         Product
                     </div>
                     <div class="flex flex-col gap-1.5 text-sm links">
-                        <NuxtLink to="https://blogtally.com/products/pulse" data-blogtally-event="PulseClick">
+                        <NuxtLink to="https://hakanai.io/products/pulse" data-blogtally-event="PulseClick">
                             Pulse (analytics)
                         </NuxtLink>
-                        <NuxtLink to="https://blogtally.com/products/broadcast" data-blogtally-event="BroadcastClick">
+                        <NuxtLink to="https://hakanai.io/products/broadcast" data-blogtally-event="BroadcastClick">
                             Broadcast (newsletters)
                         </NuxtLink>
                     </div>
@@ -48,10 +48,10 @@
                         Resources
                     </div>
                     <div class="flex flex-col gap-2 links">
-                        <NuxtLink to="https://blogtally.com/docs/" :external="true" data-blogtally-event="Docs">
+                        <NuxtLink to="https://hakanai.io/docs/" :external="true" data-blogtally-event="Docs">
                             Docs
                         </NuxtLink>
-                        <NuxtLink to="https://blogtally.com/blog/" :external="true" data-blogtally-event="Docs">
+                        <NuxtLink to="https://hakanai.io/blog/" :external="true" data-blogtally-event="Docs">
                             Blog
                         </NuxtLink>
                         <NuxtLink to="/" :external="true" data-blogtally-event="Resources">

@@ -314,13 +314,13 @@
       ]
     },
       {
-        "id": "blogtallypulse",
-        "name": "BlogTally Pulse",
-        "logo": "https://blogtally.com/_ipx/f_webp/android-chrome-192x192.png",
+        "id": "hakanaipulse",
+        "name": "Hakanai Pulse",
+        "logo": "https://hakanai.io/_ipx/f_webp/android-chrome-192x192.png",
         "use" : true ,
-        "contentSlug": "blogtally-pulse",
+        "contentSlug": "hakanai-pulse",
         "description": "Blog-specific analytics platform designed to give content creators the metrics that matter most for blogging.",
-        "url": "https://blogtally.com/products/pulse",
+        "url": "https://hakanai.io/products/pulse",
         "pros": [
           "Specifically designed for bloggers",
           "Focus on content performance metrics",
@@ -572,12 +572,12 @@
         "quizzTags": ["newsletter", "markdown", "minimal", "affordable", "developer", "simple", "technical"]
       },
       {
-        "id": "blogtallybrodcast",
-        "name": "BlogTally Broadcast",
-        "logo": "https://blogtally.com/_ipx/f_webp/android-chrome-192x192.png",
+        "id": "hakanaibrodcast",
+        "name": "Hakanai Broadcast",
+        "logo": "https://hakanai.io/_ipx/f_webp/android-chrome-192x192.png",
         "use" : true ,
         "description": "Newsletter solution specifically designed for bloggers to convert readers into email subscribers.",
-        "url": "https://blogtally.com/products/broadcast",
+        "url": "https://hakanai.io/products/broadcast",
         "pros": [
           "Built specifically for blog-to-newsletter conversion",
           "Content repurposing tools",
@@ -2239,7 +2239,7 @@
         {
           "key": "Newsletter",
           "value": "Via integration",
-          "comment": "Requires third-party services integration like Blogtally, Mailchimp, ConvertKit, etc."
+          "comment": "Requires third-party services integration like Hakanai, Mailchimp, ConvertKit, etc."
         },
         {
           "key": "Search",
@@ -3209,12 +3209,12 @@
         {
           "key": "Analytics",
           "value": "Yes",
-          "comment": "Built-in integrations with multiple analytics platforms (Fathom, Pirsch, Google Analytics, Blogtally Pulse, Umami, Matomo)"
+          "comment": "Built-in integrations with multiple analytics platforms (Fathom, Pirsch, Google Analytics, Hakanai Pulse, Umami, Matomo)"
         },
         {
           "key": "Newsletter",
           "value": "Yes",
-          "comment": "Built-in integration with Blogtally pulse and mailjet"
+          "comment": "Built-in integration with Hakanai pulse and mailjet"
         },
         {
           "key": "Search",
@@ -3506,7 +3506,7 @@
           "hasQuizz": true,
           "name": "Analytics Tools",
           "description": "Privacy-friendly solutions to track visitors and understand your audience",
-          "itemRefs": ["blogtallypulse", "fathom", "matomo", "pirsch",  "plausible", "umami" ]
+          "itemRefs": ["hakanaipulse", "fathom", "matomo", "pirsch",  "plausible", "umami" ]
         },
         {
           "id": "comment-systems",
@@ -3518,7 +3518,7 @@
           "id": "email-marketing",
           "name": "Newsletter & Email Marketing",
           "description": "Build your email list and connect directly with your audience",
-          "itemRefs": ["convertkit", "mailerlite", "substack", "beehiiv", "buttondown", "blogtallybrodcast"]
+          "itemRefs": ["convertkit", "mailerlite", "substack", "beehiiv", "buttondown", "hakanaibrodcast"]
         },
         {
           "id": "seo-tools",

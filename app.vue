@@ -71,8 +71,8 @@ useHead({
 
 useSeoMeta({
     ogImage: `${config.public.baseUrl}/images/og_index.png`,
-    ogImageAlt: 'BlogTally',
-    ogSiteName: 'BlogTally'
+    ogImageAlt: 'Hakanai',
+    ogSiteName: 'Hakanai'
 
 })
 

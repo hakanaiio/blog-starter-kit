@@ -1,4 +1,4 @@
-const url = process.env.BASE_URL || 'https://resources.blogtally.com'
+const url = process.env.BASE_URL || 'https://blog-starter-kit.hakanai.io'
 
 export default defineNuxtConfig({
 
@@ -12,7 +12,7 @@ export default defineNuxtConfig({
 
   site: {
     url,
-    name: 'BlogTally - blog starter kit',
+    name: 'Hakanai - blog starter kit',
     indexable: true
   },
 
@@ -46,7 +46,7 @@ export default defineNuxtConfig({
     public: {
       baseUrl: url,
 
-      name: 'BlogTally',
+      name: 'Hakanai',
 
     },
   },

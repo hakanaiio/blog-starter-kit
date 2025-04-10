@@ -1,4 +1,4 @@
-## Blogtally blog starter kit
+## Hakanai blog starter kit
 
 This repository contains various resources for bloggers and content creators to help them get started with their blog.
 
@@ -23,8 +23,8 @@ Some suggestions may be refused if:
 
 This repository is public for viewing purposes only.
 
-Copyright © Blogtally
+Copyright © Hakanai
 
 **No permission is granted** to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of this software without explicit written permission from the owner.
 
-For any usage requests, please contact me at: contact@blogtally.com
+For any usage requests, please contact me at: contact@hakanai.io
