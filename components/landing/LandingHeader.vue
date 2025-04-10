@@ -99,7 +99,7 @@
                                                 <template v-if="!subItem.disabled">
                                                     <NuxtLink
                                                         :to="subItem.path"
-                                                        :data-blogtally-event="subItem.eventName"
+                                                        :data-hakanai-event="subItem.eventName"
                                                         :external="subItem.external"
                                                     >
                                                         {{ subItem.name }}
@@ -135,7 +135,7 @@
                                         <template v-if="!subItem.disabled">
                                             <NuxtLink
                                                 :to="subItem.path"
-                                                :data-blogtally-event="subItem.eventName"
+                                                :data-hakanai-event="subItem.eventName"
                                                 :external="subItem.external"
                                             >
                                                 {{ subItem.name }}

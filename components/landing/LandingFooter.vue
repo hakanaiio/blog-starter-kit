@@ -24,10 +24,10 @@
                         Product
                     </div>
                     <div class="flex flex-col gap-1.5 text-sm links">
-                        <NuxtLink to="https://hakanai.io/products/pulse" data-blogtally-event="PulseClick">
+                        <NuxtLink to="https://hakanai.io/products/pulse" data-hakanai-event="PulseClick">
                             Pulse (analytics)
                         </NuxtLink>
-                        <NuxtLink to="https://hakanai.io/products/broadcast" data-blogtally-event="BroadcastClick">
+                        <NuxtLink to="https://hakanai.io/products/broadcast" data-hakanai-event="BroadcastClick">
                             Broadcast (newsletters)
                         </NuxtLink>
                     </div>
@@ -48,16 +48,16 @@
                         Resources
                     </div>
                     <div class="flex flex-col gap-2 links">
-                        <NuxtLink to="https://hakanai.io/docs/" :external="true" data-blogtally-event="Docs">
+                        <NuxtLink to="https://hakanai.io/docs/" :external="true" data-hakanai-event="Docs">
                             Docs
                         </NuxtLink>
-                        <NuxtLink to="https://hakanai.io/blog/" :external="true" data-blogtally-event="Docs">
+                        <NuxtLink to="https://hakanai.io/blog/" :external="true" data-hakanai-event="Docs">
                             Blog
                         </NuxtLink>
-                        <NuxtLink to="/" :external="true" data-blogtally-event="Resources">
+                        <NuxtLink to="/" :external="true" data-hakanai-event="Resources">
                             Blogger starter kit
                         </NuxtLink>
-                        <NuxtLink to="https://github.com/blogtally/blog-starter-kit" :external="true" class="flex gap-1 items-center">
+                        <NuxtLink to="https://github.com/hakanaiio/blog-starter-kit" :external="true" class="flex gap-1 items-center">
                             <Icon icon="logos:github-icon" size="4" />
                             Contribute on github
                         </NuxtLink>
@@ -68,22 +68,22 @@
                         Starting
                     </div>
                     <div class="flex flex-col gap-2 links">
-                        <NuxtLink to="/quiz/cms" data-blogtally-event="Quizz">
+                        <NuxtLink to="/quiz/cms" data-hakanai-event="Quizz">
                             Which CMS should you choose?
                         </NuxtLink>
-                        <NuxtLink to="/quiz/analytics" data-blogtally-event="Quizz">
+                        <NuxtLink to="/quiz/analytics" data-hakanai-event="Quizz">
                             Which analytics should you choose?
                         </NuxtLink>
-                        <NuxtLink to="/cms" data-blogtally-event="Resources">
+                        <NuxtLink to="/cms" data-hakanai-event="Resources">
                             CMS for bloggers
                         </NuxtLink>
-                        <NuxtLink to="/hosting" data-blogtally-event="Resources">
+                        <NuxtLink to="/hosting" data-hakanai-event="Resources">
                             Blog hosting solutions
                         </NuxtLink>
-                        <NuxtLink to="/tools" data-blogtally-event="Resources">
+                        <NuxtLink to="/tools" data-hakanai-event="Resources">
                             Blog tools
                         </NuxtLink>
-                        <NuxtLink to="/community" data-blogtally-event="Resources">
+                        <NuxtLink to="/community" data-hakanai-event="Resources">
                             Blogger communities
                         </NuxtLink>
                     </div>

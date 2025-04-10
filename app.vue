@@ -15,8 +15,8 @@ if (devEnv) {
     useHead(() => ({
         script: [
             {
-                src: 'https://tracker.blogtally.com/blogtally.min.js',
-                id: 'blogtallyjs',
+                src: 'https://tracker.hakanai.io/hakanai.min.js',
+                id: 'hakanaijs',
                 defer: true,
                 async: true,
                 'data-endpoint' : 'http://localhost:8080/api/collect',
@@ -30,8 +30,8 @@ if (devEnv) {
     useHead(() => ({
         script: [
             {
-                src: 'https://tracker.blogtally.com/blogtally.min.js',
-                id: 'blogtallyjs',
+                src: 'https://tracker.hakanai.io/hakanai.min.js',
+                id: 'hakanaijs',
                 defer: true,
                 async: true,
                 'data-link-tracking': 'true',
