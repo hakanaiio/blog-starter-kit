@@ -75,7 +75,7 @@
                             >
                                 <div class="flex">
                                     <div class="text-2xl font-bold text-slate-800 flex justify-center items-center gap-2 ">
-                                        <NuxtImg class="h-8 w-8 inline " src="/android-chrome-192x192.png" format="webp" alt="Logo Blogtally" />
+                                        <NuxtImg class="h-8 w-8 inline " src="/android-chrome-192x192.png" format="webp" alt="Logo Hakanai" />
                                         <NuxtLink to="/" class="text-slate-800">
                                             Blog starter kit
                                         </NuxtLink>

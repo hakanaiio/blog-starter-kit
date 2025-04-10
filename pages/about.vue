@@ -255,7 +255,7 @@
                                     <div class="px-6 pb-4">
                                         <p class="text-base text-gray-700">
                                             Your contributions are welcome! If you know of a tool that deserves to be mentioned or if you have feedback on existing resources,
-                                            please don't hesitate submit an issue and propose a pull request <NuxtLink class="link" to="https://github.com/blogtally/blog-starter-kit">
+                                            please don't hesitate submit an issue and propose a pull request <NuxtLink class="link" to="https://github.com/hakanaiio/blog-starter-kit">
                                                 on the GitHub repository
                                             </NuxtLink>.
                                         </p>
