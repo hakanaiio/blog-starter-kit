@@ -29,9 +29,17 @@ const subcategory = category
 const title = `Best ${subcategory?.name} solutions for Content Creators`
 const description = `Best ${subcategory?.name} solutions for Content Creators: ${subcategory?.description}`
 
+useHead({
+    link: [
+        {
+            rel: 'canonical',
+            href: fullUrl
+        }
+    ]
+})
+
 useSeoMeta({
     title: title,
-    canonical: fullUrl,
     twitterTitle: title,
     ogTitle: title,
 

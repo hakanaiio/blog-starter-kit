@@ -13,11 +13,10 @@ import Compare from '~/components/resources/Compare.vue'
 import LandingFooter from '~/components/landing/LandingFooter.vue'
 import LandingHeader from '~/components/landing/LandingHeader.vue'
 
-// Définition pour le SEO
 useHead({
-    title: 'Comparaison de ressources',
+    title: 'Resource comparison',
     meta: [
-        { name: 'description', content: 'Comparez deux ressources pour choisir celle qui correspond le mieux à vos besoins.' }
+        { name: 'description', content: 'Compare two resources to find the best one for you.' },
     ]
 })
 
@@ -28,11 +27,11 @@ const item2 = getItemById(route.params.itemId2 as string)
 
 if (item1 && item2) {
     useHead({
-        title: `${item1.name} vs ${item2.name} - Comparaison détaillée`,
+        title: `${item1.name} vs ${item2.name} - Detailed comparison`,
         meta: [
             {
                 name: 'description',
-                content: `Comparaison détaillée entre ${item1.name} et ${item2.name}. Découvrez les différences de fonctionnalités, prix et avantages pour faire le meilleur choix.`
+                content: `Detailed comparison between ${item1.name} and ${item2.name}. Discover the features, pricing, and alternatives of both resources to make an informed decision.`,
             }
         ]
     })

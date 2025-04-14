@@ -23,9 +23,17 @@ const category = getCategoryById(categoryId)
 const title = `Best ${category?.name} solutions for Content Creators`
 const description = `Best ${category?.name} solutions for Content Creators: ${category?.description}`
 
+useHead({
+    link: [
+        {
+            rel: 'canonical',
+            href: fullUrl
+        }
+    ]
+})
+
 useSeoMeta({
     title: title,
-    canonical: fullUrl,
     twitterTitle: title,
     ogTitle: title,
 

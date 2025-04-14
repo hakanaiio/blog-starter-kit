@@ -25,9 +25,17 @@ const fullUrl = `${config.public.baseUrl}${route.path}`
 const description = 'All the resources you need to start your blog.'
 const title = 'Blogger starter kit - All resources'
 
+useHead({
+    link: [
+        {
+            rel: 'canonical',
+            href: fullUrl
+        }
+    ]
+})
+
 useSeoMeta({
     title: title,
-    canonical: fullUrl,
     twitterTitle: title,
     ogTitle: title,
 

@@ -24,9 +24,17 @@ const quizId = route.params.quizzId
 const description = 'The Blogger starter kit is a collection of resources to help you start your blog.'
 const title = 'Blogger starter kit'
 
+useHead({
+    link: [
+        {
+            rel: 'canonical',
+            href: fullUrl
+        }
+    ]
+})
+
 useSeoMeta({
     title: title,
-    canonical: fullUrl,
     twitterTitle: title,
     ogTitle: title,
 

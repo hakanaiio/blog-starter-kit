@@ -24,9 +24,17 @@ const item = getItemById(itemId)
 const title = item?.name + ' Review: Features, Pricing & Alternatives'
 const description = 'Best tool for content creators: ' +  item?.description
 
+useHead({
+    link: [
+        {
+            rel: 'canonical',
+            href: fullUrl
+        }
+    ]
+})
+
 useSeoMeta({
     title: title,
-    canonical: fullUrl,
     twitterTitle: title,
     ogTitle: title,
 
