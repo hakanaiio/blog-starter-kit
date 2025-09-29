@@ -13,7 +13,7 @@ export default defineNuxtConfig({
   site: {
     url,
     name: 'Hakanai - blog starter kit',
-    indexable: true
+    indexable: false
   },
 
   sitemap: {
