@@ -24,10 +24,10 @@
                         Product
                     </div>
                     <div class="flex flex-col gap-1.5 text-sm links">
-                        <NuxtLink to="https://hakanai.io/products/pulse" data-hakanai-event="PulseClick">
+                        <NuxtLink to="https://pulse.hakanai.io" data-hakanai-event="PulseClick">
                             Pulse (analytics)
                         </NuxtLink>
-                        <NuxtLink to="https://hakanai.io/products/broadcast" data-hakanai-event="BroadcastClick">
+                        <NuxtLink to="https://broadcast.hakanai.io" data-hakanai-event="BroadcastClick">
                             Broadcast (newsletters)
                         </NuxtLink>
                     </div>

@@ -320,7 +320,7 @@
         "use" : true ,
         "contentSlug": "hakanai-pulse",
         "description": "Blog-specific analytics platform designed to give content creators the metrics that matter most for blogging.",
-        "url": "https://hakanai.io/products/pulse",
+        "url": "https://pulse.hakanai.io",
         "pros": [
           "Specifically designed for bloggers",
           "Focus on content performance metrics",
@@ -577,7 +577,7 @@
         "logo": "https://hakanai.io/_ipx/f_webp/android-chrome-192x192.png",
         "use" : true ,
         "description": "Newsletter solution specifically designed for bloggers to convert readers into email subscribers.",
-        "url": "https://hakanai.io/products/broadcast",
+        "url": "https://broadcast.hakanai.io",
         "pros": [
           "Built specifically for blog-to-newsletter conversion",
           "Content repurposing tools",
